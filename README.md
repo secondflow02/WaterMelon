@@ -1,8 +1,7 @@
 
 <div align="center">
 
-[Uploading KakaoTalk_Photo_2023-11-13-02-26-26.jpeg…]()
-
+![watermelon]
 
 # 워터멜론
 
