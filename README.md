@@ -1,7 +1,8 @@
-
+![KakaoTalk_Photo_2023-11-13-02-26-26](https://github.com/secondflow02/WaterMelon/assets/98089768/08da24b4-6887-4d20-b5eb-4d3ab56e1386)
 <div align="center">
 
-![WarterMelon]
+[Uploading KakaoTalk_Photo_2023-11-13-02-26-26.jpeg…]()
+
 
 # 워터멜론
 
