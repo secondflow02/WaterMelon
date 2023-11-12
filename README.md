@@ -1,7 +1,8 @@
 
 <div align="center">
 
-![watermelon]
+![watermelon](https://github.com/secondflow02/WaterMelon/assets/98089768/2437c587-f925-4463-91cd-b3ae3a29f10b)
+
 
 # 워터멜론
 
