@@ -20,8 +20,9 @@ const MainBanner = () => {
 export default MainBanner;
 
 const ImgContainer = styled.div`
-    width: 100%;
-    ${flexCenter}
+    /* width: 100%;
+    ${flexCenter} */
+    margin-top: 40px;
 `;
 
 const BannerWrapper = styled.div`

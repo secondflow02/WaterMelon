@@ -59,8 +59,8 @@ const Wrapper = styled.div`
     width: 100%;
 `;
 const Container = styled.div`
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
     ${flexCenter}
     width: 1008px;
     flex-direction: column;

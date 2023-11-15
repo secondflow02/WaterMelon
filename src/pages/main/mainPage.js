@@ -8,27 +8,35 @@ import styled from "styled-components";
 import LatestAlbum from "./components/LatestAlbum/LatestAlbum";
 import LargeAlbum from "./components/LargeAlbum";
 import LoginBox from "./components/LoginContainer/LoginBox";
+import { flexCenter } from "../../styles/common";
+import Header from "../../layouts/header";
+import Footer from "../../layouts/footer";
 
 const MainPage = () => {
     return (
         <>
-       <Styled.Wrapper>
-      <LatestAlbum />
-      <LargeAlbum />
-      <LoginBox />
-    </Styled.Wrapper>
-            <MainBanner />
-            <PopularContentsContainer />
-            <Charts />
-            <Notice />
+            <Wrapper>
+                <Header />
+                <Box>
+                    <LatestAlbum />
+                    <LargeAlbum />
+                    <LoginBox />
+                </Box>
+                <MainBanner />
+                <PopularContentsContainer />
+                <Charts />
+                <Notice />
+                <Footer />
+            </Wrapper>
         </>
     );
 };
 export default MainPage;
 const Wrapper = styled.div`
-  display: flex;
+    ${flexCenter};
+    flex-direction: column;
 `;
 
-const Styled = {
-  Wrapper,
-};
+const Box = styled.div`
+    ${flexCenter};
+`;

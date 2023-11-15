@@ -34,8 +34,8 @@ export default TopFooter;
 const Wrapper = styled.div`
     width: 100%;
     height: 150px;
-    position: absolute;
-    bottom: 10%;
+    /* position: absolute;
+    bottom: 10%; */
 `;
 const Ul = styled.ul`
     height: 50px;

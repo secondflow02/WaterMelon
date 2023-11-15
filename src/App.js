@@ -1,4 +1,3 @@
-
 import { RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import waterMelon from "./routes/route";
