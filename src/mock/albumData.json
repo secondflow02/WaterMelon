@@ -1,77 +1,76 @@
 {
-    "albumdata": [
-        {
-            // 이미지 넣어야됨dddd
-            // 데이터 총 12개
-            "image": "/imgs/짱구배경.PNG",
-            "title": "The Best of the 80's",
-            "signer": "Various Artists",
-            "category": "국내"
-        },
-        {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "Summer",
-            "signer": "Joe Hisaishi",
-            "category": "국내"
-        },
-        {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "Waving Through A Window",
-            "signer": "Ben Platt",
-            "category": "국내"
-        },
-        {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "GROWING IP IS ____",
-            "signer": "Ruel",
-            "category": "국내"
-        },
-        {
-            "title": "Ghost Town",
-            "signer": "Benson Boone",
-            "category": "국내"
-        },
-        {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "Memories",
-            "signer": "Conan Gray",
-            "category": "국내"
-        },
-        {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "One",
-            "signer": "Ed Sheeran",
-            "category": "해외"
-        },
-        {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "I.O.U",
-            "signer": "Carry & Ron",
-            "category": "해외"
-        },
-        {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "Masquerade",
-            "signer": "Elina",
-            "category": "해외"
-        },
-        {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "Batter then this",
-            "signer": "Lauv",
-            "category": "해외"
-        },
-        {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "Masquerade",
-            "signer": "Elina",
-            "category": "해외"
-        },
-        {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "Batter then this",
-            "signer": "Lauv",
-            "category": "해외"
-        }
-    ]
+  "albumdata": [
+    {
+      "image": "/imgs/짱구배경.PNG",
+      "title": "The Best of the 80's",
+      "singer": "Various Artists",
+      "category": "국내"
+    },
+    {
+      "image": "/imgs/짱구배경.PNG",
+      "title": "Summer",
+      "singer": "Joe Hisaishi",
+      "category": "국내"
+    },
+    {
+      "image": "/imgs/짱구배경.PNG",
+      "title": "Waving Through A Window",
+      "singer": "Ben Platt",
+      "category": "국내"
+    },
+    {
+      "image": "/imgs/짱구배경.PNG",
+      "title": "GROWING IP IS ____",
+      "singer": "Ruel",
+      "category": "국내"
+    },
+    {
+      "image": "/imgs/짱구배경.PNG",
+      "title": "Ghost Town",
+      "singer": "Benson Boone",
+      "category": "국내"
+    },
+    {
+      "image": "/imgs/짱구배경.PNG",
+      "title": "Memories",
+      "singer": "Conan Gray",
+      "category": "국내"
+    },
+    {
+      "image": "/imgs/짱구배경.PNG",
+      "title": "One",
+      "singer": "Ed Sheeran",
+      "category": "해외"
+    },
+    {
+      "image": "/imgs/짱구배경.PNG",
+      "title": "I.O.U",
+      "singer": "Carry & Ron",
+      "category": "해외"
+    },
+    {
+      "image": "/imgs/짱구배경.PNG",
+      "title": "Masquerade",
+      "singer": "Elina",
+      "category": "해외"
+    },
+    {
+      "image": "/imgs/짱구배경.PNG",
+      "title": "Batter then this",
+      "singer": "Lauv",
+      "category": "해외"
+    },
+    {
+      "image": "/imgs/짱구배경.PNG",
+      "title": "Masquerade",
+      "singer": "Elina",
+      "category": "해외"
+    },
+    {
+      "image": "/imgs/짱구배경.PNG",
+      "title": "Batter then this",
+      "singer": "Lauv",
+      "category": "해외"
+    }
+  ]
 }
