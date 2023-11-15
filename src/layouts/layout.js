@@ -1,15 +1,15 @@
-import header from "./header";
-import footer from "./footer";
-import { Outlet } from "react-router-dom";
-
 // 3페어 최하영 김진솔
+import { Outlet } from "react-router-dom";
+import Header from "./header";
+import Footer from "./footer";
+
 const RootLayout = () => {
-  return (
-    <>
-      <header />
-      <Outlet />
-      <footer />
-    </>
-  );
+    return (
+        <>
+            <Header />
+            <Outlet />
+            <Footer />
+        </>
+    );
 };
 export default RootLayout;

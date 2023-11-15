@@ -1,54 +1,54 @@
 {
-  "chartdata": [
-    {
-      "image": "/imgs/짱구배경.PNG",
-      "title": "The Best of the 80's",
-      "signer": "Various Artists"
-    },
-    {
-      "image": "/imgs/짱구배경.PNG",
-      "title": "Summer",
-      "signer": "Joe Hisaishi"
-    },
-    {
-      "image": "/imgs/짱구배경.PNG",
-      "title": "Waving Through A Window",
-      "signer": "Ben Platt"
-    },
-    {
-      "image": "/imgs/짱구배경.PNG",
-      "title": "GROWING IP IS ____",
-      "signer": "Ruel"
-    },
-    {
-      "image": "/imgs/짱구배경.PNG",
-      "title": "Ghost Town",
-      "signer": "Benson Boone"
-    },
-    {
-      "image": "/imgs/짱구배경.PNG",
-      "title": "Memories",
-      "signer": "Conan Gray"
-    },
-    {
-      "image": "/imgs/짱구배경.PNG",
-      "title": "One",
-      "signer": "Ed Sheeran"
-    },
-    {
-      "image": "/imgs/짱구배경.PNG",
-      "title": "I.O.U",
-      "signer": "Carry & Ron"
-    },
-    {
-      "image": "/imgs/짱구배경.PNG",
-      "title": "Masquerade",
-      "signer": "Elina"
-    },
-    {
-      "image": "/imgs/짱구배경.PNG",
-      "title": "Batter then this",
-      "signer": "Lauv"
-    }
-  ]
+    "chartdata": [
+        {
+            "image": "/imgs/짱구배경.PNG",
+            "title": "The Best of the 80's",
+            "singer": "Various Artists"
+        },
+        {
+            "image": "/imgs/짱구배경.PNG",
+            "title": "Summer",
+            "singer": "Joe Hisaishi"
+        },
+        {
+            "image": "/imgs/짱구배경.PNG",
+            "title": "Waving Through A Window",
+            "singer": "Ben Platt"
+        },
+        {
+            "image": "/imgs/짱구배경.PNG",
+            "title": "GROWING IP IS ____",
+            "singer": "Ruel"
+        },
+        {
+            "image": "/imgs/짱구배경.PNG",
+            "title": "Ghost Town",
+            "singer": "Benson Boone"
+        },
+        {
+            "image": "/imgs/짱구배경.PNG",
+            "title": "Memories",
+            "singer": "Conan Gray"
+        },
+        {
+            "image": "/imgs/짱구배경.PNG",
+            "title": "One",
+            "singer": "Ed Sheeran"
+        },
+        {
+            "image": "/imgs/짱구배경.PNG",
+            "title": "I.O.U",
+            "singer": "Carry & Ron"
+        },
+        {
+            "image": "/imgs/짱구배경.PNG",
+            "title": "Masquerade",
+            "singer": "Elina"
+        },
+        {
+            "image": "/imgs/짱구배경.PNG",
+            "title": "Batter then this",
+            "singer": "Lauv"
+        }
+    ]
 }

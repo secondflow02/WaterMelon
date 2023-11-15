@@ -1,9 +1,15 @@
-import "./App.css";
+
 import { RouterProvider } from "react-router-dom";
-import router from "./router/route";
+import { ThemeProvider } from "styled-components";
+import waterMelon from "./routes/route";
+import theme from "./styles/theme";
 
 function App() {
-  return <RouterProvider router={router} />;
+    return (
+        <ThemeProvider theme={theme}>
+            <RouterProvider router={waterMelon} />
+        </ThemeProvider>
+    );
 }
 
 export default App;
