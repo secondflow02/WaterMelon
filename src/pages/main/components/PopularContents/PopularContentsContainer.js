@@ -5,6 +5,7 @@ import albumData from "../../../../mock/albumData.json";
 import 짱구 from "../../../../imgs/album/짱구배경.PNG";
 
 const PopularContentsContainer = () => {
+    albumData.albumdata.map((el, index) => console.log(el.image));
     return (
         <>
             <HotIssueConTainer>
@@ -14,12 +15,15 @@ const PopularContentsContainer = () => {
                         지금 이슈가 되는 아티스트의 인기 컨텐츠입니다.
                     </TXT_INTRO>
                 </H2>
-                <UL>
-                    {albumData.albumdata.map((el, index) => (
-                        <LI>
+                <SUB_LIST>
+                    <ISSUE_LIST>
+                        {albumData.albumdata.map((el, index) => (
                             <DL>
                                 <MOV_AREA>
-                                    <img src={el.image} alt={el.title} />
+                                    <a href=";">
+                                        <IMG src={짱구} alt={el.title} />
+                                        <BG_ALBUM_FRAME></BG_ALBUM_FRAME>
+                                    </a>
                                 </MOV_AREA>
                                 <DT>
                                     <TITLE>{el.title}</TITLE>
@@ -27,14 +31,14 @@ const PopularContentsContainer = () => {
                                 </DT>
                                 <VIEW_NO>{el.category}</VIEW_NO>
                             </DL>
-                        </LI>
-                    ))}
-                </UL>
+                        ))}
+                    </ISSUE_LIST>
+                </SUB_LIST>
 
                 <WRAP_PAGE>
                     <PAGE>
-                        <PAGE_NUM></PAGE_NUM>
-                        <WRAP_BTN></WRAP_BTN>
+                        <PAGE_NUM>&lt;</PAGE_NUM>
+                        <WRAP_BTN>&gt;</WRAP_BTN>
                     </PAGE>
                 </WRAP_PAGE>
             </HotIssueConTainer>
@@ -46,7 +50,6 @@ export default PopularContentsContainer;
 const HotIssueConTainer = styled.div`
     letter-spacing: 0;
     color: #666;
-    -webkit-text-size-adjust: none;
     margin: 0;
     padding: 0;
     border: 0;
@@ -59,6 +62,7 @@ const HotIssueConTainer = styled.div`
     height: 472px;
     margin-top: 32px;
     margin-bottom: 49px;
+    margin-right: 106.14px;
 `;
 
 const H2 = styled.h2`
@@ -116,7 +120,7 @@ const WRAP_BTN = styled.span`
     margin-left: 3px;
 `;
 
-const UL = styled.ul`
+const SUB_LIST = styled.ul`
     letter-spacing: 0;
     color: #666;
     -webkit-text-size-adjust: none;
@@ -124,12 +128,14 @@ const UL = styled.ul`
     padding: 0;
     border: 0;
     font: inherit;
-    vertical-align: baseline;
     list-style: none;
     font-weight: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
-const LI = styled.li`
+const ISSUE_LIST = styled.li`
     letter-spacing: 0;
     color: #666;
     -webkit-text-size-adjust: none;
@@ -147,7 +153,6 @@ const LI = styled.li`
 const DL = styled.dl`
     letter-spacing: 0;
     color: #666;
-    -webkit-text-size-adjust: none;
     list-style: none;
     padding: 0;
     border: 0;
@@ -155,12 +160,13 @@ const DL = styled.dl`
     vertical-align: baseline;
     margin-left: 0 !important;
     position: relative;
-    margin: 16px 0 2px 16px;
+    margin: 16px 10px 2px 0px;
     float: left;
 `;
 
 const MOV_AREA = styled.dd`
     letter-spacing: 0;
+    color: #666;
     -webkit-text-size-adjust: none;
     list-style: none;
     margin: 0;
@@ -171,12 +177,40 @@ const MOV_AREA = styled.dd`
     overflow: hidden;
     width: 223px;
     height: 148px;
+    position: relative;
+`;
+
+const IMG = styled.img`
+    letter-spacing: 0;
+    -webkit-text-size-adjust: none;
+    list-style: none;
     color: #1a1a1a;
-    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    vertical-align: baseline;
     line-height: 0;
     font-size: 0;
-    left: 50%;
+    border: 0;
+    height: 100%;
+    width: 100%;
+    position: relative;
+`;
+
+const BG_ALBUM_FRAME = styled.a`
+    letter-spacing: 0;
+    list-style: none;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    position: absolute;
     top: 0;
+    left: 0;
+    width: 223px;
+    height: 148px;
 `;
 
 const DT = styled.dt`
@@ -234,6 +268,8 @@ const ELIPSIS = styled.span`
 `;
 
 const VIEW_NO = styled.dd`
+    letter-spacing: 0;
+    -webkit-text-size-adjust: none;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -247,6 +283,4 @@ const VIEW_NO = styled.dd`
     font-family: "Dotum", "Apple Gothic", sans-serif;
     color: #888;
     height: 14px;
-    padding-right: 6px;
-    color: #7cb710;
 `;
