@@ -1,16 +1,17 @@
 // 공용 2조
 
-import Charts from "./components/MelonCharts/Charts";
-import PopularContentsContainer from "./components/PopularContents/PopularContentsContainer";
-import MainBanner from "./components/MainBanner";
-import Notice from "./components/Notice";
-import styled from "styled-components";
-import LatestAlbum from "./components/LatestAlbum/LatestAlbum";
-import LargeAlbum from "./components/LargeAlbum";
-import LoginBox from "./components/LoginContainer/LoginBox";
-import { flexCenter } from "../../styles/common";
-import Header from "../../layouts/header";
-import Footer from "../../layouts/footer";
+import Footer from 'layouts/footer';
+import Header from 'layouts/header';
+import styled from 'styled-components';
+import { flexCenter } from 'styles/common';
+
+import LargeAlbum from './components/LargeAlbum';
+import LatestAlbum from './components/LatestAlbum/LatestAlbum';
+import LoginBox from './components/LoginContainer/LoginBox';
+import MainBanner from './components/MainBanner';
+import Charts from './components/MelonCharts/Charts';
+import Notice from './components/Notice';
+import PopularContentsContainer from './components/PopularContents/PopularContentsContainer';
 
 const MainPage = () => {
     return (

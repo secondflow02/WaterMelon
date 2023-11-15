@@ -1,9 +1,10 @@
 //멜론검색창
 // 3페어 최하영 김진솔
 
-import styled from "styled-components";
-import serchbarIcon from "../../../imgs/logo/그림1.png";
-import { flexCenter } from "../../../styles/common";
+import styled from 'styled-components';
+
+import serchbarIcon from '../../../imgs/logo/그림1.png';
+import { flexCenter } from '../../../styles/common';
 
 const HeaderSearchBar = () => {
     return (

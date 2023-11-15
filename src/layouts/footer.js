@@ -1,6 +1,7 @@
-import styled from "styled-components";
-import TopFooter from "./components/footer/TopFooter";
-import { flexCenter, flexAlignCenter } from "../styles/common";
+import styled from 'styled-components';
+
+import { flexAlignCenter, flexCenter } from '../styles/common';
+import TopFooter from './components/footer/TopFooter';
 
 // 3페어 최하영, 김진솔
 const Footer = () => {

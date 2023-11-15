@@ -1,6 +1,6 @@
 //차트 뿌려주는곳
 
-import styled, { css } from "styled-components";
+import styled from 'styled-components';
 
 // 2페어 차필우 허진욱
 const Charts = () => {
