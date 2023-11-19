@@ -107,7 +107,7 @@ const SmallAlbumList = styled.div`
 const Box = styled.div`
     width: 150px;
     height: 150px;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     box-sizing: border-box;
     border: 1px solid black;
     position: relative;

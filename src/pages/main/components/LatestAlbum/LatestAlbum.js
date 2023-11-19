@@ -46,8 +46,8 @@ const LatestTitle = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 35px;
-    margin-top: 20px;
+    height: 24px;
+    margin-top: 18px;
 `;
 const Arrow = styled.span`
     font-weight: lighter;
