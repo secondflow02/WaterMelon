@@ -1,11 +1,10 @@
 //이슈뉴스 6개 전체감싼거
 // 2페어 차필우 허진욱
 import styled from "styled-components";
-import albumData from "../../../../mock/albumData.json";
-import 짱구 from "../../../../imgs/album/짱구배경.PNG";
+import contentsData from "../../../../mock/contentsData.json";
+import { flexCenter } from "../../../../styles/common";
 
 const PopularContentsContainer = () => {
-    albumData.albumdata.map((el, index) => console.log(el.image));
     return (
         <>
             <HotIssueConTainer>
@@ -17,11 +16,11 @@ const PopularContentsContainer = () => {
                 </H2>
                 <SUB_LIST>
                     <ISSUE_LIST>
-                        {albumData.albumdata.map((el, index) => (
+                        {contentsData.contentsdata.map((el, index) => (
                             <DL>
                                 <MOV_AREA>
                                     <a href=";">
-                                        <IMG src={짱구} alt={el.title} />
+                                        <IMG src={el.image} alt="" />
                                         <BG_ALBUM_FRAME></BG_ALBUM_FRAME>
                                     </a>
                                 </MOV_AREA>
@@ -34,7 +33,6 @@ const PopularContentsContainer = () => {
                         ))}
                     </ISSUE_LIST>
                 </SUB_LIST>
-
                 <WRAP_PAGE>
                     <PAGE>
                         <PAGE_NUM>&lt;</PAGE_NUM>
@@ -48,11 +46,7 @@ const PopularContentsContainer = () => {
 export default PopularContentsContainer;
 
 const HotIssueConTainer = styled.div`
-    letter-spacing: 0;
     color: #666;
-    margin: 0;
-    padding: 0;
-    border: 0;
     font: inherit;
     vertical-align: baseline;
     clear: both;
@@ -62,10 +56,10 @@ const HotIssueConTainer = styled.div`
     height: 472px;
     margin-top: 32px;
     margin-bottom: 49px;
-    margin-right: 106.14px;
 `;
 
 const H2 = styled.h2`
+    font: inherit;
     height: 24px;
     color: #1a1a1a;
     font-size: 15px;
@@ -73,13 +67,15 @@ const H2 = styled.h2`
     letter-spacing: -1px;
     font-weight: bold;
     font-family: "맑은 고딕", "Malgun Gothic", "Apple Gothic", sans-serif;
+    border-bottom: 0.8px solid #dfe6e8;
+    margin: 0;
 `;
 
 const TITLE_LINK = styled.span`
+    display: block;
     float: left;
     width: 70px;
     height: 15px;
-    display: block;
     background: url(//cdnimg.melon.co.kr/resource/image/web/main/bg_main_title_140716.png)
         no-repeat;
     background-position: 0 -194px;
@@ -87,6 +83,10 @@ const TITLE_LINK = styled.span`
 `;
 
 const TXT_INTRO = styled.span`
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
     display: inline-block;
     width: 300px;
     margin-top: 1px;
@@ -148,6 +148,10 @@ const ISSUE_LIST = styled.li`
     font-weight: normal;
     clear: both;
     width: 704px;
+    overflow: hidden;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 `;
 
 const DL = styled.dl`
@@ -229,7 +233,6 @@ const DT = styled.dt`
 
 const TITLE = styled.span`
     letter-spacing: 0;
-    -webkit-text-size-adjust: none;
     list-style: none;
     cursor: pointer;
     margin: 0;
@@ -237,12 +240,12 @@ const TITLE = styled.span`
     border: 0;
     font: inherit;
     vertical-align: baseline;
-    overflow: hidden;
     height: 16px;
     font-weight: bold;
     color: #333;
     margin-top: 6px;
     margin-bottom: 2px;
+    overflow: hidden;
     word-break: break-all;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -281,6 +284,6 @@ const VIEW_NO = styled.dd`
     margin-top: 2px;
     font-size: 11px;
     font-family: "Dotum", "Apple Gothic", sans-serif;
-    color: #888;
+    color: green;
     height: 14px;
 `;
