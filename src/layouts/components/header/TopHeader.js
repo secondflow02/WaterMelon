@@ -13,7 +13,7 @@ const TopHeader = () => {
                     <Container>
                         <Ul>
                             <Li>
-                                <A href="#">워터멜론티켓</A>
+                                <A href="/water">워터멜론티켓</A>
                             </Li>
                         </Ul>
                     </Container>
