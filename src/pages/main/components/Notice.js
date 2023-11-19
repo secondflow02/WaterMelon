@@ -1,8 +1,9 @@
 //공지사항
 // 3페어 최하영 김진솔
 
-import styled from "styled-components";
-import { flexCenter, flexAlignCenter } from "../../../styles/common";
+import styled from 'styled-components';
+
+import { flexAlignCenter, flexCenter } from '../../../styles/common';
 
 const Notice = () => {
     return (

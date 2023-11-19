@@ -4,6 +4,7 @@ import styled from "styled-components";
 import contentsData from "../../../../mock/contentsData.json";
 import { flexCenter } from "../../../../styles/common";
 
+
 const PopularContentsContainer = () => {
     return (
         <>
@@ -95,7 +96,7 @@ const TXT_INTRO = styled.span`
     font-weight: normal;
     color: #888;
     font-size: 12px;
-    font-family: "Dotum", "Apple Gothic", sans-serif;
+    font-family: 'Dotum', 'Apple Gothic', sans-serif;
     background: 0;
     vertical-align: top;
 `;
@@ -111,7 +112,7 @@ const PAGE_NUM = styled.span`
     font-size: 12px;
     line-height: 17px;
     vertical-align: top;
-    font-family: arial, "돋움", "dotum", sans-serif, "Apple Gothic", sans-serif;
+    font-family: arial, '돋움', 'dotum', sans-serif, 'Apple Gothic', sans-serif;
 `;
 
 const WRAP_BTN = styled.span`

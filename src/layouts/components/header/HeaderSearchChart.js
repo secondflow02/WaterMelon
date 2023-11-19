@@ -2,9 +2,10 @@
 // 3페어 최하영 김진솔
 
 // 5초마다 목록이 바뀜
-import styled from "styled-components";
-import risingData from "../../../mock/risingData.json";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from 'react';
+import styled from 'styled-components';
+
+import risingData from '../../../mock/risingData.json';
 
 const HeaderSearchChart = () => {
     const [state, setState] = useState(risingData.riseingdata);
@@ -16,7 +17,7 @@ const HeaderSearchChart = () => {
         const risingStar = setInterval(() => {
             arrRef.current = risingData.riseingdata[riseRef.current];
             riseRef.current++;
-            setState((state) => arrRef.current);
+            setState(state => arrRef.current);
             if (riseRef.current > 9) {
                 riseRef.current = 0;
             }

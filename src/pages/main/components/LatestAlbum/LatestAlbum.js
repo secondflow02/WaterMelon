@@ -1,7 +1,8 @@
 //최신앨범...........6개들어갈거
 
-import styled from "styled-components";
-import SmallAlbum from "./SmallAlbum";
+import styled from 'styled-components';
+
+import SmallAlbum from './SmallAlbum';
 // 1페어 이영록 장지영
 const LatestAlbum = () => {
     return (
@@ -69,7 +70,7 @@ const CategoryName = styled.li`
     color: #666;
     padding: 0 4px;
     &:not(:last-of-type)::after {
-        content: "|";
+        content: '|';
         margin-left: 6px;
     }
 `;
