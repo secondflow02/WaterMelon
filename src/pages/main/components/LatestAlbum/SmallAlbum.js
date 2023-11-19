@@ -1,4 +1,4 @@
-//김나영 (미니앨범 1개) 이영록,장지영
+ //김나영 (미니앨범 1개) 이영록,장지영
 
 import AlbumData from "../../../../mock/albumData.json";
 import styled from "styled-components";
