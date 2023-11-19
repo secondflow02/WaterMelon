@@ -1,8 +1,8 @@
 //이슈뉴스 6개 전체감싼거
 // 2페어 차필우 허진욱
-import styled from "styled-components";
-import albumData from "../../../../mock/albumData.json";
-import 짱구 from "../../../../imgs/album/짱구배경.PNG";
+import styled from 'styled-components';
+
+import albumData from '../../../../mock/albumData.json';
 
 const PopularContentsContainer = () => {
     albumData.albumdata.map((el, index) => console.log(el.image));
@@ -72,7 +72,7 @@ const H2 = styled.h2`
     line-height: 15px;
     letter-spacing: -1px;
     font-weight: bold;
-    font-family: "맑은 고딕", "Malgun Gothic", "Apple Gothic", sans-serif;
+    font-family: '맑은 고딕', 'Malgun Gothic', 'Apple Gothic', sans-serif;
 `;
 
 const TITLE_LINK = styled.span`
@@ -95,7 +95,7 @@ const TXT_INTRO = styled.span`
     font-weight: normal;
     color: #888;
     font-size: 12px;
-    font-family: "Dotum", "Apple Gothic", sans-serif;
+    font-family: 'Dotum', 'Apple Gothic', sans-serif;
     background: 0;
     vertical-align: top;
 `;
@@ -111,7 +111,7 @@ const PAGE_NUM = styled.span`
     font-size: 12px;
     line-height: 17px;
     vertical-align: top;
-    font-family: arial, "돋움", "dotum", sans-serif, "Apple Gothic", sans-serif;
+    font-family: arial, '돋움', 'dotum', sans-serif, 'Apple Gothic', sans-serif;
 `;
 
 const WRAP_BTN = styled.span`
@@ -280,7 +280,7 @@ const VIEW_NO = styled.dd`
     width: 223px;
     margin-top: 2px;
     font-size: 11px;
-    font-family: "Dotum", "Apple Gothic", sans-serif;
+    font-family: 'Dotum', 'Apple Gothic', sans-serif;
     color: #888;
     height: 14px;
 `;

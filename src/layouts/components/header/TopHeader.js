@@ -1,8 +1,9 @@
 //멜론티켓~공지사항
 // 3페어 최하영 김진솔
 
-import { styled } from "styled-components";
-import { flexAlignCenter, flexCenter } from "../../../styles/common";
+import { styled } from 'styled-components';
+
+import { flexAlignCenter, flexCenter } from '../../../styles/common';
 
 const TopHeader = () => {
     return (
@@ -12,7 +13,7 @@ const TopHeader = () => {
                     <Container>
                         <Ul>
                             <Li>
-                                <A href="#">워터멜론티켓</A>
+                                <A href="/water">워터멜론티켓</A>
                             </Li>
                         </Ul>
                     </Container>

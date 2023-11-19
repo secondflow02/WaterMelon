@@ -1,6 +1,6 @@
-import { css, styled } from "styled-components";
-import { useNavigate } from "react-router-dom";
-import Promotions from "./Promotions";
+import { styled } from 'styled-components';
+
+import Promotions from './Promotions';
 //로그인
 // 1페어 이영록 장지영
 const LoginBox = () => {

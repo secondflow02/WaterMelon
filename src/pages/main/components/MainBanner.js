@@ -2,9 +2,10 @@
 
 // 3페어 최하영 김진솔
 
-import styled from "styled-components";
-import bannerLogo from "../../../imgs/logo/59.jpg";
-import { flexCenter } from "../../../styles/common";
+import styled from 'styled-components';
+
+import bannerLogo from '../../../imgs/logo/59.jpg';
+import { flexCenter } from '../../../styles/common';
 
 const MainBanner = () => {
     return (

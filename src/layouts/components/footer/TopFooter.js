@@ -1,5 +1,6 @@
-import styled from "styled-components";
-import { flexAlignCenter } from "../../../styles/common";
+import styled from 'styled-components';
+
+import { flexAlignCenter } from '../../../styles/common';
 
 const TopFooter = () => {
     return (
