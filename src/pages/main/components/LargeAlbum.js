@@ -10,7 +10,6 @@ const LargeAlbum = () => {
 
     return (
         <Styled.Wrapper>
-            <div>?</div>
             <Styled.EventList>
                 <Styled.Playcontain>
                     <Styled.MoveContain>
