@@ -7,10 +7,15 @@ import MockLargeAlbumData from '../../../mock/LargeAlbumData.json';
 const LargeAlbum = () => {
     const Datas = MockLargeAlbumData.LargeAlbumData;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     console.log(Datas[0].image);
 
 >>>>>>> a5adb240689454dbbf531e2c2f16500707998d55
+=======
+    console.log(Datas[0].image);
+
+>>>>>>> 6bd47540a8ca530f5c2f0f5480c93df7f1cf0b37
     return (
         <Styled.Wrapper>
             <div>?</div>
@@ -25,12 +30,18 @@ const LargeAlbum = () => {
                     <Styled.PlayBtn>=</Styled.PlayBtn>
                 </Styled.Playcontain>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Styled.EventPart src={Datas[0]}></Styled.EventPart>
 =======
                 {Datas.map(el => (
                     <Styled.EventPart src={el.image}></Styled.EventPart>
                 ))}
 >>>>>>> a5adb240689454dbbf531e2c2f16500707998d55
+=======
+                {Datas.map(el => (
+                    <Styled.EventPart src={el.image}></Styled.EventPart>
+                ))}
+>>>>>>> 6bd47540a8ca530f5c2f0f5480c93df7f1cf0b37
             </Styled.EventList>
         </Styled.Wrapper>
     );
