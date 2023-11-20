@@ -2,7 +2,7 @@
 
 import styled from 'styled-components';
 
-const albumdata = [
+export const albumdata = [
     {
         image: 'https://cdnimg.melon.co.kr/cm2/album/images/113/65/621/11365621_20231115141741_500.jpg?039040c6decae7b1fd9aaa7107049299/melon/resize/156/quality/80/optimize',
         title: "The Best of the 80's",
@@ -78,21 +78,26 @@ const albumdata = [
 ];
 console.log(albumdata);
 
-const SmallAlbum = () => {
+const SmallAlbum = ({ currentIndex }) => {
     return (
         <Styled.SmallAlbumList>
-            {albumdata.slice(0, 6).map((album, index) => (
-                <Styled.Box key={index}>
-                    <Styled.AlbumImage src={album.image} alt="앨범배경" />
-                    <Styled.SingerName>{album.singer}</Styled.SingerName>
-                    <Styled.AlbumInfo>
-                        <p>
-                            <span>{album.title}</span> <br />
-                            {album.singer}
-                        </p>
-                    </Styled.AlbumInfo>
-                </Styled.Box>
-            ))}
+            {albumdata
+                .slice(currentIndex, currentIndex + 6)
+                .map((album, index) => (
+                    <Styled.Box key={index}>
+                        <Styled.AlbumImage src={album.image} alt="앨범배경" />
+                        <Styled.SingerName>{album.singer}</Styled.SingerName>
+                        <Styled.AlbumInfo>
+                            <p>
+                                <Styled.TextEffect>
+                                    {album.title}
+                                </Styled.TextEffect>
+                                <br />
+                                {album.singer}
+                            </p>
+                        </Styled.AlbumInfo>
+                    </Styled.Box>
+                ))}
         </Styled.SmallAlbumList>
     );
 };
@@ -146,11 +151,12 @@ const AlbumInfo = styled.div`
         opacity: 1;
         background-color: rgba(0, 0, 0, 0.7);
     }
+`;
+const TextEffect = styled.span`
+    font-weight: bold;
 
-    p {
-        span {
-            font-weight: bold;
-        }
+    &:hover {
+        /* <marquee behavior="" direction="left"></marquee> */
     }
 `;
 const SingerName = styled.div`
@@ -176,4 +182,5 @@ const Styled = {
     AlbumInfo,
     AlbumImage,
     SingerName,
+    TextEffect,
 };

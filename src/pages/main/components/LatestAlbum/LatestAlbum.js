@@ -1,10 +1,42 @@
 //최신앨범...........6개들어갈거
-
+import React, { useState } from 'react';
 import styled from 'styled-components';
-
-import SmallAlbum from './SmallAlbum';
+import SmallAlbum, { albumdata } from './SmallAlbum';
 // 1페어 이영록 장지영
 const LatestAlbum = () => {
+    const [slideAlbumListIndex, setSlideAlbumListtIndex] = useState(0);
+    const [albumCategory, setAlbumCategory] = useState(albumdata);
+
+    const albumListData = albumdata.length;
+    console.log(albumListData);
+
+    const onClickPrevAlbum = () => {
+        setSlideAlbumListtIndex(prev =>
+            prev - 6 < 0 ? prev + albumListData - 6 : prev - 6,
+        );
+    };
+    const onClickNextAlbum = () => {
+        setSlideAlbumListtIndex(prev =>
+            prev + 6 >= albumListData ? 0 : prev + 6,
+        );
+    };
+
+    const onClickDomestic = () => {
+        const domesticAlbum = albumdata.filter(
+            album => album.category === '국내',
+        );
+        console.log(domesticAlbum);
+        setAlbumCategory(domesticAlbum);
+        setSlideAlbumListtIndex(0);
+    };
+    const onClickOverseas = () => {
+        const overseasAlbum = albumdata.filter(
+            album => album.category === '해외',
+        );
+        console.log(overseasAlbum);
+        setAlbumCategory(overseasAlbum);
+        setSlideAlbumListtIndex(0);
+    };
     return (
         <Styled.Wrapper>
             <Styled.LatestTitle>
@@ -14,22 +46,28 @@ const LatestAlbum = () => {
                 <Styled.CategoryBox>
                     <Styled.Category>
                         <Styled.CategoryName>
-                            <a onclick={() => {}}>전체</a>
+                            <a onClick={() => {}}>전체</a>
                         </Styled.CategoryName>
                         <Styled.CategoryName>
-                            <a onclick={() => {}}>국내</a>
+                            <a onClick={onClickDomestic}>국내</a>
                         </Styled.CategoryName>
                         <Styled.CategoryName>
-                            <a onclick={() => {}}>해외</a>
+                            <a onClick={onClickOverseas}>해외</a>
                         </Styled.CategoryName>
-                        <CategoryIndex>1/9</CategoryIndex>
-                        <button>&lt;</button>
-                        <button>&gt;</button>
+                        <Styled.CategoryIndex>
+                            {/* {slideAlbumListIndex + 1}/{albumdata.length} */}
+                            1/4
+                        </Styled.CategoryIndex>
+                        <button onClick={onClickPrevAlbum}>&lt;</button>
+                        <button onClick={onClickNextAlbum}>&gt;</button>
                     </Styled.Category>
                 </Styled.CategoryBox>
             </Styled.LatestTitle>
             <SmallAlbumContainer>
-                <SmallAlbum />
+                <SmallAlbum
+                    currentIndex={slideAlbumListIndex}
+                    key={slideAlbumListIndex}
+                />
             </SmallAlbumContainer>
         </Styled.Wrapper>
     );
@@ -66,6 +104,9 @@ const CategoryName = styled.li`
     &:not(:last-of-type)::after {
         content: '|';
         margin-left: 6px;
+    }
+    a {
+        cursor: pointer;
     }
 `;
 const CategoryIndex = styled.p`
