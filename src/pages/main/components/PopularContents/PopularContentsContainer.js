@@ -1,21 +1,8 @@
 //이슈뉴스 6개 전체감싼거
 // 2페어 차필우 허진욱
-<<<<<<< HEAD
-<<<<<<< HEAD
 import styled from "styled-components";
 import contentsData from "../../../../mock/contentsData.json";
 import { flexAlignCenter, flexCenter } from "../../../../styles/common";
-=======
-import styled from 'styled-components';
-
-import albumData from '../../../../mock/albumData.json';
->>>>>>> a5adb240689454dbbf531e2c2f16500707998d55
-=======
-import styled from "styled-components";
-import contentsData from "../../../../mock/contentsData.json";
-import { flexCenter } from "../../../../styles/common";
-
->>>>>>> 6bd47540a8ca530f5c2f0f5480c93df7f1cf0b37
 
 const PopularContentsContainer = () => {
     return (
@@ -78,19 +65,9 @@ const H2 = styled.h2`
     line-height: 15px;
     letter-spacing: -1px;
     font-weight: bold;
-<<<<<<< HEAD
-<<<<<<< HEAD
     font-family: "맑은 고딕", "Malgun Gothic", "Apple Gothic", sans-serif;
     border-bottom: 0.8px solid #dfe6e8;
     margin: 0;
-=======
-    font-family: '맑은 고딕', 'Malgun Gothic', 'Apple Gothic', sans-serif;
->>>>>>> a5adb240689454dbbf531e2c2f16500707998d55
-=======
-    font-family: "맑은 고딕", "Malgun Gothic", "Apple Gothic", sans-serif;
-    border-bottom: 0.8px solid #dfe6e8;
-    margin: 0;
->>>>>>> 6bd47540a8ca530f5c2f0f5480c93df7f1cf0b37
 `;
 
 const TITLE_LINK = styled.span`
@@ -109,23 +86,6 @@ const TXT_INTRO = styled.span`
     background: 0;
     vertical-align: top;
 `;
-<<<<<<< HEAD
-=======
-const WRAP_PAGE = styled.div`
-    position: absolute;
-    top: 0;
-    right: 0;
-`;
-const PAGE = styled.div``;
-const PAGE_NUM = styled.span`
-    display: inline-block;
-    color: #888;
-    font-size: 12px;
-    line-height: 17px;
-    vertical-align: top;
-    font-family: arial, '돋움', 'dotum', sans-serif, 'Apple Gothic', sans-serif;
-`;
->>>>>>> a5adb240689454dbbf531e2c2f16500707998d55
 
 const SUB_LIST = styled.ul`
     color: #666;
@@ -246,18 +206,8 @@ const VIEW_NO = styled.dd`
     width: 223px;
     margin-top: 2px;
     font-size: 11px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    font-family: "Dotum", "Apple Gothic", sans-serif;
-    color: green;
-=======
     font-family: 'Dotum', 'Apple Gothic', sans-serif;
     color: #888;
->>>>>>> a5adb240689454dbbf531e2c2f16500707998d55
-=======
-    font-family: "Dotum", "Apple Gothic", sans-serif;
-    color: green;
->>>>>>> 6bd47540a8ca530f5c2f0f5480c93df7f1cf0b37
     height: 14px;
 `;
 
