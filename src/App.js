@@ -1,7 +1,8 @@
-import { RouterProvider } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
-import waterMelon from "./routes/route";
-import theme from "./styles/theme";
+import { RouterProvider } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+
+import waterMelon from './routes/route';
+import theme from './styles/theme';
 
 function App() {
     return (

@@ -1,10 +1,11 @@
 //네비게이션바 ul로 집어넣을거임
 // 3페어 최하영, 김진솔
-import TopHeader from "./components/header/TopHeader";
-import HeaderSearchChart from "./components/header/HeaderSearchChart";
-import HeaderSearchBar from "./components/header/HeaderSerchBar";
-import styled from "styled-components";
-import { flexAlignCenter } from "../styles/common";
+import styled from 'styled-components';
+import { flexAlignCenter } from 'styles/common';
+
+import HeaderSearchChart from './components/header/HeaderSearchChart';
+import HeaderSearchBar from './components/header/HeaderSerchBar';
+import TopHeader from './components/header/TopHeader';
 
 const Header = () => {
     return (

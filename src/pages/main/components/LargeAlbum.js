@@ -1,9 +1,16 @@
 //박제업 앨범
 // 1페어 이영록 장지영
-import styled from "styled-components";
-import MockLargeAlbumData from "../../../mock/LargeAlbumData.json";
+import styled from 'styled-components';
+
+import MockLargeAlbumData from '../../../mock/LargeAlbumData.json';
+
 const LargeAlbum = () => {
     const Datas = MockLargeAlbumData.LargeAlbumData;
+<<<<<<< HEAD
+=======
+    console.log(Datas[0].image);
+
+>>>>>>> a5adb240689454dbbf531e2c2f16500707998d55
     return (
         <Styled.Wrapper>
             <div>?</div>
@@ -17,7 +24,13 @@ const LargeAlbum = () => {
                     </Styled.MoveContain>
                     <Styled.PlayBtn>=</Styled.PlayBtn>
                 </Styled.Playcontain>
+<<<<<<< HEAD
                 <Styled.EventPart src={Datas[0]}></Styled.EventPart>
+=======
+                {Datas.map(el => (
+                    <Styled.EventPart src={el.image}></Styled.EventPart>
+                ))}
+>>>>>>> a5adb240689454dbbf531e2c2f16500707998d55
             </Styled.EventList>
         </Styled.Wrapper>
     );
