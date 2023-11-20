@@ -24,7 +24,7 @@ const LargeAlbum = () => {
     //     }, 4000);
     //     return () => clearInterval(largeRef);
     // }, [startBtn]);
-    //if문으로먼저 하고
+    //IF문으로사용할려고하는데 CONSOLE에서 0~3까지 게속찍힘
     // if (startBtn === false) {
     //     setInterval(() => {
     //         albumRef.current = LargeData.LargeData[largeRef.current];
@@ -36,12 +36,14 @@ const LargeAlbum = () => {
     //         }
     //     }, 4000);
     // }
+    // 3페어꺼 보고   clearinterval을빼먹은것을 알게됨
     useEffect(() => {
         if (startBtn === false) {
             const interval = setInterval(() => {
                 albumRef.current = LargeData.LargeData[largeRef.current];
                 console.log(largeRef.current);
                 largeRef.current++;
+                console.log(albumRef.current);
                 //setState(state => albumRef.current);
                 if (largeRef.current > 3) {
                     largeRef.current = 0;
@@ -70,9 +72,8 @@ const LargeAlbum = () => {
                         </button>
                     </Styled.PlayBtn>
                 </Styled.PlayContain>
-                {Datas.map(el => (
-                    <Styled.EventPart src={el.image}></Styled.EventPart>
-                ))}
+
+                <Styled.EventPart src={albumRef.current}></Styled.EventPart>
             </Styled.EventList>
         </Styled.Wrapper>
     );
