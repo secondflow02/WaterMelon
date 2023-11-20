@@ -1,5 +1,4 @@
 // 공용 2조
-
 import Footer from 'layouts/footer';
 import Header from 'layouts/header';
 import styled from 'styled-components';

@@ -1,3 +1,4 @@
+import WaterMelonTicket from 'pages/waterMelonTicket/waterMelonTicket';
 import { createBrowserRouter } from 'react-router-dom';
 
 import RootLayout from '../layouts/layout';
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
                 element: <MainPage />,
             },
         ],
+    },
+    {
+        path: '/water',
+        element: <WaterMelonTicket />,
     },
 ]);
 export default router;
