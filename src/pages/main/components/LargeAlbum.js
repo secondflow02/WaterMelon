@@ -1,8 +1,7 @@
 //박제업 앨범
 // 1페어 이영록 장지영
+import MockLargeAlbumData from 'mock/LargeAlbumData';
 import styled from 'styled-components';
-
-import MockLargeAlbumData from '../../../mock/LargeAlbumData.json';
 
 const LargeAlbum = () => {
     const Datas = MockLargeAlbumData.LargeAlbumData;

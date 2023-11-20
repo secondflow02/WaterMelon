@@ -1,7 +1,7 @@
 //네비게이션바 ul로 집어넣을거임
 // 3페어 최하영, 김진솔
 import styled from 'styled-components';
-import { flexAlignCenter } from 'styles/common';
+import { flexAlignCenter, flexCenter } from 'styles/common';
 
 import HeaderSearchChart from './components/header/HeaderSearchChart';
 import HeaderSearchBar from './components/header/HeaderSerchBar';
@@ -18,6 +18,11 @@ const Header = () => {
                             <P>WaterMelon</P>
                         </Logo>
                         <HeaderSearchBar />
+                        <div>
+                            <Update>
+                                <B>급상승</B>
+                            </Update>
+                        </div>
                         <HeaderSearchChart />
                         {/* <TempBox /> */}
                     </Container>
@@ -81,6 +86,7 @@ const Logo = styled.div``;
 const P = styled.p`
     color: #8ec260;
     font-size: 35px;
+    font-weight: 700;
 `;
 
 const MenuContainer = styled.div`
@@ -100,7 +106,7 @@ const MenuLi = styled.li``;
 
 const MenuA = styled.a`
     margin: 0 10px;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 600;
     text-decoration: none;
     color: #000;
@@ -111,4 +117,19 @@ const MenuA = styled.a`
 
 const Span = styled.span`
     color: #8ec260;
+`;
+
+const Update = styled.div`
+    width: 50px;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 35px;
+    background-color: #8ec260;
+    ${flexCenter};
+`;
+
+const B = styled.p`
+    color: #fff;
+    font-size: 12px;
 `;
