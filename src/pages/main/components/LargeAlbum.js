@@ -1,26 +1,75 @@
 //박제업 앨범
 // 1페어 이영록 장지영
+import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
-import MockLargeAlbumData from '../../../mock/LargeAlbumData.json';
+import LargeData from '../../../mock/LargeAlbumData.json';
 
 const LargeAlbum = () => {
-    const Datas = MockLargeAlbumData.LargeAlbumData;
-    console.log(Datas[0].image);
+    //const [state, setState] = useState(LargeData.LargeData);
+    const Datas = LargeData.LargeData;
+    const [startBtn, setStartBtn] = useState(false);
+    let largeRef = useRef(0);
+    let albumRef = useRef([]);
+    //clearinterveal 똑바로 이해못함
+    // useEffect(() => {
+    //     setInterval(() => {
+    //         albumRef.current = LargeData.LargeData[largeRef.current];
+    //         console.log(largeRef.current);
+    //          largeRef.current++;
+    //         setState(state => albumRef.current);
+    //         if (largeRef.current > 3) {
+    //             largeRef.current = 0;
+    //         }
+    //     }, 4000);
+    //     return () => clearInterval(largeRef);
+    // }, [startBtn]);
+    //if문으로먼저 하고
+    // if (startBtn === false) {
+    //     setInterval(() => {
+    //         albumRef.current = LargeData.LargeData[largeRef.current];
+    //         console.log(largeRef.current);
+    //         largeRef.current++;
+    //         setState(state => albumRef.current);
+    //         if (largeRef.current > 3) {
+    //             largeRef.current = 0;
+    //         }
+    //     }, 4000);
+    // }
+    useEffect(() => {
+        if (startBtn === false) {
+            const interval = setInterval(() => {
+                albumRef.current = LargeData.LargeData[largeRef.current];
+                console.log(largeRef.current);
+                largeRef.current++;
+                //setState(state => albumRef.current);
+                if (largeRef.current > 3) {
+                    largeRef.current = 0;
+                }
+            }, 4000);
+            return () => clearInterval(interval);
+        }
+    }, [startBtn]);
 
+    const onClickBtn = () => {
+        setStartBtn(prev => !prev);
+    };
     return (
         <Styled.Wrapper>
-            <div>?</div>
             <Styled.EventList>
-                <Styled.Playcontain>
+                <Styled.PlayContain>
                     <Styled.MoveContain>
                         <Styled.MoveBtn>o</Styled.MoveBtn>
                         <Styled.MoveBtn>o</Styled.MoveBtn>
                         <Styled.MoveBtn>o</Styled.MoveBtn>
                         <Styled.MoveBtn>o</Styled.MoveBtn>
                     </Styled.MoveContain>
-                    <Styled.PlayBtn>=</Styled.PlayBtn>
-                </Styled.Playcontain>
+                    <Styled.PlayBtn>
+                        <button onClick={onClickBtn}>
+                            {startBtn ? '>' : '='}
+                        </button>
+                    </Styled.PlayBtn>
+                </Styled.PlayContain>
                 {Datas.map(el => (
                     <Styled.EventPart src={el.image}></Styled.EventPart>
                 ))}
@@ -49,7 +98,7 @@ const EventPart = styled.img`
     height: 315px;
 `;
 //움직이는 버튼모음
-const Playcontain = styled.div`
+const PlayContain = styled.div`
     position: absolute;
     top: 1px;
     right: 2px;
@@ -75,7 +124,7 @@ const Styled = {
     Wrapper,
     EventList,
     EventPart,
-    Playcontain,
+    PlayContain,
     PlayBtn,
     MoveContain,
     MoveBtn,
