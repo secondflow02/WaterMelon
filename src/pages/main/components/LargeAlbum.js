@@ -9,6 +9,7 @@ import Image1 from '../../../components/LargeAlbum';
 // import img1 from 'https://cdnimg.melon.co.kr/svc/images/main/imgUrl20231114014430.jpg/melon/quality/80';
 
 const LargeAlbum = () => {
+
     //const [state, setState] = useState(LargeData.LargeData);
     const [startBtn, setStartBtn] = useState(false);
     let largeRef = useRef(0);
@@ -79,6 +80,7 @@ const LargeAlbum = () => {
         setStartBtn(prev => !prev);
     };
 
+
     return (
         <Styled.Wrapper>
             <Styled.EventList>
@@ -97,6 +99,7 @@ const LargeAlbum = () => {
                             <button onClick={index3Btn}>o</button>
                         </Styled.MoveBtn>
                     </Styled.MoveContain>
+
                     <Styled.PlayBtn>
                         <button onClick={onStartBtn}>
                             {startBtn ? '>' : '='}
@@ -105,6 +108,7 @@ const LargeAlbum = () => {
                 </Styled.PlayContain>
 
                 <Styled.EventPart></Styled.EventPart>
+
             </Styled.EventList>
         </Styled.Wrapper>
     );
