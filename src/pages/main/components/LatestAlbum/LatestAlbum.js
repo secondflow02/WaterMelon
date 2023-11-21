@@ -1,6 +1,7 @@
 //최신앨범...........6개들어갈거
 import React, { useState } from 'react';
 import styled from 'styled-components';
+
 import SmallAlbum, { albumdata } from './SmallAlbum';
 // 1페어 이영록 장지영
 const LatestAlbum = () => {
