@@ -1,6 +1,6 @@
 //김나영 (미니앨범 1개) 이영록,장지영
 
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const albumdata = [
     {
@@ -78,7 +78,7 @@ export const albumdata = [
 ];
 console.log(albumdata);
 
-const SmallAlbum = ({ currentIndex }) => {
+const SmallAlbum = ({ currentIndex, categoryData }) => {
     return (
         <Styled.SmallAlbumList>
             {albumdata
@@ -117,6 +117,7 @@ const Box = styled.div`
     border: 1px solid black;
     position: relative;
     background-color: black;
+    cursor: pointer;
 `;
 const AlbumImage = styled.img`
     width: 150px;
@@ -146,18 +147,29 @@ const AlbumInfo = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
     ${Box}:hover & {
         opacity: 1;
         background-color: rgba(0, 0, 0, 0.7);
     }
 `;
+const leftFlowAnimation = keyframes`
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+`;
+
 const TextEffect = styled.span`
     font-weight: bold;
-
-    &:hover {
-        /* <marquee behavior="" direction="left"></marquee> */
-    }
+    text-decoration: underline;
+    /* text-overflow: ellipsis; */
+    display: inline-block;
+    overflow: hidden;
+    animation: ${leftFlowAnimation} 5s linear infinite;
 `;
 const SingerName = styled.div`
     width: 100%;

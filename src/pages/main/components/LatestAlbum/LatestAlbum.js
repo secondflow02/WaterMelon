@@ -21,54 +21,56 @@ const LatestAlbum = () => {
         );
     };
 
-    const onClickDomestic = () => {
-        const domesticAlbum = albumdata.filter(
-            album => album.category === '국내',
+    const onClickFilterCategory = category => {
+        const filterAlbumCategory = albumdata.filter(
+            album => album.category === category,
         );
-        console.log(domesticAlbum);
-        setAlbumCategory(domesticAlbum);
+        setAlbumCategory(filterAlbumCategory);
+        console.log(filterAlbumCategory);
         setSlideAlbumListtIndex(0);
     };
-    const onClickOverseas = () => {
-        const overseasAlbum = albumdata.filter(
-            album => album.category === '해외',
-        );
-        console.log(overseasAlbum);
-        setAlbumCategory(overseasAlbum);
-        setSlideAlbumListtIndex(0);
-    };
+
     return (
         <Styled.Wrapper>
             <Styled.LatestTitle>
-                <h5>
+                <Styled.Title>
                     최신 앨범 <Arrow>&gt;</Arrow>
-                </h5>
+                </Styled.Title>
                 <Styled.CategoryBox>
                     <Styled.Category>
                         <Styled.CategoryName>
                             <a onClick={() => {}}>전체</a>
                         </Styled.CategoryName>
                         <Styled.CategoryName>
-                            <a onClick={onClickDomestic}>국내</a>
+                            <a onClick={() => onClickFilterCategory('국내')}>
+                                국내
+                            </a>
                         </Styled.CategoryName>
                         <Styled.CategoryName>
-                            <a onClick={onClickOverseas}>해외</a>
+                            <a onClick={() => onClickFilterCategory('해외')}>
+                                해외
+                            </a>
                         </Styled.CategoryName>
                         <Styled.CategoryIndex>
-                            {/* {slideAlbumListIndex + 1}/{albumdata.length} */}
-                            1/4
+                            <Styled.CategoryIndex>
+                                {`${
+                                    Math.floor(slideAlbumListIndex / 6) + 1
+                                }/${Math.ceil(albumListData / 6)}`}
+                            </Styled.CategoryIndex>
+                            {/* 1/4 */}
                         </Styled.CategoryIndex>
                         <button onClick={onClickPrevAlbum}>&lt;</button>
                         <button onClick={onClickNextAlbum}>&gt;</button>
                     </Styled.Category>
                 </Styled.CategoryBox>
             </Styled.LatestTitle>
-            <SmallAlbumContainer>
+            <Styled.SmallAlbumContainer>
                 <SmallAlbum
                     currentIndex={slideAlbumListIndex}
+                    categoryData={albumCategory}
                     key={slideAlbumListIndex}
                 />
-            </SmallAlbumContainer>
+            </Styled.SmallAlbumContainer>
         </Styled.Wrapper>
     );
 };
@@ -86,6 +88,10 @@ const LatestTitle = styled.div`
     align-items: center;
     height: 24px;
     margin-top: 18px;
+`;
+const Title = styled.h5`
+    font-weight: 900;
+    cursor: pointer;
 `;
 const Arrow = styled.span`
     font-weight: lighter;
@@ -125,6 +131,7 @@ const SmallAlbumContainer = styled.div`
 const Styled = {
     Wrapper,
     LatestTitle,
+    Title,
     Category,
     CategoryBox,
     CategoryName,
