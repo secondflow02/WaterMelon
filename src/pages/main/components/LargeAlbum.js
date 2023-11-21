@@ -10,10 +10,8 @@ const LargeAlbum = () => {
 
     console.log(Datas[0].image);
 
-
     return (
         <Styled.Wrapper>
-            <div>?</div>
             <Styled.EventList>
                 <Styled.Playcontain>
                     <Styled.MoveContain>

@@ -4,7 +4,7 @@ import Promotions from './Promotions';
 //로그인
 // 1페어 이영록 장지영
 const LoginBox = () => {
-    // const navigate = useNavigate();
+    //const navigate = useNavigate();
     return (
         <Styled.Wrapper>
             <Styled.LoginContainer>
@@ -12,7 +12,7 @@ const LoginBox = () => {
                     <Styled.Explanation>
                         워터멜론을 더 안전하게 이용하세요.
                     </Styled.Explanation>
-                    <Styled.SignUp>회원가입</Styled.SignUp>
+                    <Styled.SignUp href="SignUp">회원가입</Styled.SignUp>
                 </Styled.LoginSContainer>
                 <Styled.LoginBtn>
                     <span>로그인</span>
@@ -39,6 +39,7 @@ const LoginContainer = styled.div`
     background-color: #fbfbfb;
     border: 1px solid #e0e0e0;
     text-align: center;
+    margin-top: 26px;
 `;
 //로그인 소박스
 const LoginSContainer = styled.div`
@@ -62,6 +63,10 @@ const SignUp = styled.a`
     font-size: 11px;
     float: right;
     letter-spacing: -0.5px;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
 `;
 //로그인 버튼
 const LoginBtn = styled.button`
@@ -73,6 +78,10 @@ const LoginBtn = styled.button`
     color: #fff;
     font-size: 14px;
     border: 0;
+    &:hover {
+        background-color: #01b925;
+        cursor: pointer;
+    }
 `;
 //스타일 컴포넌트
 const Styled = {
