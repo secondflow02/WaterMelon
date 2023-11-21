@@ -127,8 +127,8 @@
 - 최신앨범, 전체, 국내, 해외 부분에 포인터 적용
 - 국내, 해외 클릭 시 SmallAlbum data를 변경해주려 하였으나, console상으로 보여지지만 화면상으로는 보여지지 않음 (수정 필요)
 - "<>" 버튼 클릭 시 SmallAlbum 화면이 6개씩 넘어가도록 로직 추가
-- main-comonents-LargeAlbum.js 에서 useref로 시간의흐름에따라 index변
-- LargeAlbumData.json에 데이터 변수명변경및 JS에서 사진 하드 코딩이아닌CSS로 주는거 실패
+- main-components-LargeAlbum.js 에서 useRef로 시간의흐름에따라 index변화
+- LargeAlbumData.json에 데이터 변수명 변경및 JS에서 사진 하드 코딩이아닌CSS로 주는거 실패
 - HeaderSeachBar 컴포넌트 안에 '급상승' 태그 main페이지로 이동 (watermelon ticket page에는 급상승이 필요없음)
 - watermelon 페이지와 watermelon ticket페이지 연동
 - watermelon ticket페이지 TicketTopHeader 생성
@@ -141,8 +141,8 @@
 ## 2023-11-21
 - mockData 갯수를 smallAlbum으로 보여지는 갯수만큼 나누어 "<>" 버튼으로 보여줄 수 있는 페이지 갯수 관련 로직 추가
 - SmallAlbum 컴포넌트 hover 시 title 왼쪽으로 흐르는 animation 적용
--  src-components-LargeAlbum [<id:#img:#>...]로 export
--main-comonents-LargeAbum 사진 컴포넌트 및 index버튼 state값추가전
+- src-components-LargeAlbum [<id:#img:#>...]로 export
+- main-comonents-LargeAbum 사진 컴포넌트 및 index버튼 state값추가전
 - concertSlideBanner.js -> SlideConcert.js 로 파일 변경
 - concertOneBanner.js -> InnerConcertBanner.js 로 파일 변경
 - InnerConcertBanner.js 안에 슬라이드 넘어가는 로직 생성(미완성)
