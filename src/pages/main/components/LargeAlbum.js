@@ -64,16 +64,17 @@ const LargeAlbum = () => {
     }, [startBtn]);
     //state이용해서 해야되는데 생각만하고 못함 +정리
     const index0Btn = () => {
-        albumRef.current = 0;
+        largeRef.current = 0;
+        console.log(largeRef.current);
     };
     const index1Btn = () => {
-        albumRef.current = 1;
+        largeRef.current = 1;
     };
     const index2Btn = () => {
-        albumRef.current = 2;
+        largeRef.current = 2;
     };
     const index3Btn = () => {
-        albumRef.current = 3;
+        largeRef.current = 3;
     };
     const onStartBtn = () => {
         setStartBtn(prev => !prev);
