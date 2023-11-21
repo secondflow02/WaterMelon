@@ -6,6 +6,7 @@ import PopularContents from "./PopularContents"
 
 // 인기있어요 컨테이너
 const PopularContentsContainer = () => {
+    albumData.albumdata.map((el, index) => console.log(el.image));
     return (
         <>
             <HotIssueConTainer>
@@ -39,6 +40,7 @@ const HotIssueConTainer = styled.div`
     height: 472px;
     margin-top: 32px;
     margin-bottom: 49px;
+    margin-right: 106.14px;
 `;
 
 const H2 = styled.h2`
@@ -70,16 +72,19 @@ const TXT_INTRO = styled.span`
     vertical-align: top;
 `;
 
+
 const SUB_LIST = styled.ul`
     color: #666;
     margin: 0;
     padding: 0;
     border: 0;
+
     font-weight: normal;
     ${flexAlignCenter}
 `;
 
 const ISSUE_LIST = styled.li`
+
     margin: 0;
     padding: 0;
     border: 0;
@@ -87,10 +92,12 @@ const ISSUE_LIST = styled.li`
     display: block;
 `;
 
+
 const WRAP_PAGE = styled.div`
     position: absolute;
     top: 0;
     right: 0;
+
 `;
 const PAGE = styled.div``;
 const PAGE_NUM = styled.span`
@@ -101,7 +108,9 @@ const PAGE_NUM = styled.span`
     font-family: arial, "돋움", "dotum", sans-serif, "Apple Gothic", sans-serif;
 `;
 
+
 const WRAP_BTN = styled.span`
     vertical-align: top;
     margin-left: 3px;
+
 `;
