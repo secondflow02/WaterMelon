@@ -1,6 +1,4 @@
 // 공용 2조
-import Footer from 'layouts/footer';
-import Header from 'layouts/header';
 import styled from 'styled-components';
 import { flexCenter } from 'styles/common';
 
@@ -16,17 +14,17 @@ const MainPage = () => {
     return (
         <>
             <Wrapper>
-                <Header />
                 <Box>
                     <LatestAlbum />
                     <LargeAlbum />
                     <LoginBox />
                 </Box>
                 <MainBanner />
-                <PopularContentsContainer />
-                <Charts />
+                <Box>
+                    <PopularContentsContainer />
+                    <Charts />
+                </Box>
                 <Notice />
-                <Footer />
             </Wrapper>
         </>
     );
