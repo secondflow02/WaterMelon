@@ -8,9 +8,9 @@ const LatestAlbum = () => {
     return (
         <Styled.Wrapper>
             <Styled.LatestTitle>
-                <h4>
+                <h5>
                     최신 앨범 <Arrow>&gt;</Arrow>
-                </h4>
+                </h5>
                 <Styled.CategoryBox>
                     <Styled.Category>
                         <Styled.CategoryName>
@@ -30,11 +30,6 @@ const LatestAlbum = () => {
             </Styled.LatestTitle>
             <SmallAlbumContainer>
                 <SmallAlbum />
-                <SmallAlbum />
-                <SmallAlbum />
-                <SmallAlbum />
-                <SmallAlbum />
-                <SmallAlbum />
             </SmallAlbumContainer>
         </Styled.Wrapper>
     );
@@ -43,8 +38,6 @@ export default LatestAlbum;
 
 // 최신 앨범
 const Wrapper = styled.div`
-    /* position: relative; */
-    z-index: 5;
     width: 476px;
     height: 340px;
     float: left;
@@ -53,7 +46,8 @@ const LatestTitle = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40px;
+    height: 24px;
+    margin-top: 18px;
 `;
 const Arrow = styled.span`
     font-weight: lighter;
@@ -78,7 +72,7 @@ const CategoryIndex = styled.p`
     padding: 0 6px;
 `;
 const SmallAlbumContainer = styled.div`
-    width: 486px;
+    width: 476px;
     height: 340px;
     display: flex;
     align-items: center;
