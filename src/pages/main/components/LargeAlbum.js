@@ -10,7 +10,6 @@ import Image1 from '../../../components/LargeAlbum';
 // import img1 from 'https://cdnimg.melon.co.kr/svc/images/main/imgUrl20231114014430.jpg/melon/quality/80';
 
 const LargeAlbum = () => {
-
     //const [state, setState] = useState(LargeData.LargeData);
     const [startBtn, setStartBtn] = useState(false);
     let largeRef = useRef(0);
@@ -66,21 +65,21 @@ const LargeAlbum = () => {
     }, [startBtn]);
     //state이용해서 해야되는데 생각만하고 못함 +정리
     const index0Btn = () => {
-        albumRef.current = 0;
+        largeRef.current = 0;
+        console.log(largeRef.current);
     };
     const index1Btn = () => {
-        albumRef.current = 1;
+        largeRef.current = 1;
     };
     const index2Btn = () => {
-        albumRef.current = 2;
+        largeRef.current = 2;
     };
     const index3Btn = () => {
-        albumRef.current = 3;
+        largeRef.current = 3;
     };
     const onStartBtn = () => {
         setStartBtn(prev => !prev);
     };
-
 
     return (
         <Styled.Wrapper>
@@ -109,7 +108,6 @@ const LargeAlbum = () => {
                 </Styled.PlayContain>
 
                 <Styled.EventPart></Styled.EventPart>
-
             </Styled.EventList>
         </Styled.Wrapper>
     );
@@ -167,3 +165,4 @@ const Styled = {
     MoveBtn,
 };
 //사진 넘어가는 거 js 사진 연결되서 넘어가는 느낌
+//말
