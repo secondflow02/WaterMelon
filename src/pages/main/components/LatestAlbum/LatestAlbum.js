@@ -33,15 +33,18 @@ const LatestAlbum = () => {
     return (
         <Styled.Wrapper>
             <Styled.LatestTitle>
+
                 <Styled.Title>
                     최신 앨범 <Arrow>&gt;</Arrow>
                 </Styled.Title>
+
                 <Styled.CategoryBox>
                     <Styled.Category>
                         <Styled.CategoryName>
                             <a onClick={() => {}}>전체</a>
                         </Styled.CategoryName>
                         <Styled.CategoryName>
+
                             <a onClick={() => onClickFilterCategory('국내')}>
                                 국내
                             </a>
@@ -50,6 +53,7 @@ const LatestAlbum = () => {
                             <a onClick={() => onClickFilterCategory('해외')}>
                                 해외
                             </a>
+
                         </Styled.CategoryName>
                         <Styled.CategoryIndex>
                             <Styled.CategoryIndex>
@@ -64,6 +68,7 @@ const LatestAlbum = () => {
                     </Styled.Category>
                 </Styled.CategoryBox>
             </Styled.LatestTitle>
+
             <Styled.SmallAlbumContainer>
                 <SmallAlbum
                     currentIndex={slideAlbumListIndex}
@@ -71,6 +76,7 @@ const LatestAlbum = () => {
                     key={slideAlbumListIndex}
                 />
             </Styled.SmallAlbumContainer>
+
         </Styled.Wrapper>
     );
 };
@@ -88,10 +94,12 @@ const LatestTitle = styled.div`
     align-items: center;
     height: 24px;
     margin-top: 18px;
+
 `;
 const Title = styled.h5`
     font-weight: 900;
     cursor: pointer;
+
 `;
 const Arrow = styled.span`
     font-weight: lighter;
