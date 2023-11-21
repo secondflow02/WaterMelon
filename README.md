@@ -68,6 +68,7 @@
 - Header에 하위 메뉴 생성
 - MainBanner -> (사이트 이벤트를 보여주는 배너) 생성 (평범한 이미지 넣기)
 - 하단 공지사항 생성
+
 -리액트로 구현하는것에 힘듦이 있어서 페어에 시간을 두는것 보다 부족한 부분을 더 공부해야겠다 싶어서 진행을 하지
 않았습니다 
 - PopularContentsContainer
@@ -108,7 +109,11 @@
 
 - ContentsData.json 생성
 - PopularContentsContainer
-  - PopularContents 이미지, 타이틀 내용 반영
+- PopularContents 이미지, 타이틀 내용 반영
+- watermelon Ticket page 컴포넌트 상세화 (피그마 사용)
+- ![image](https://github.com/secondflow02/WaterMelon/assets/142880051/5eba5111-3757-417f-a238-99e6f3a78e68)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 2023-11-20
 
@@ -124,6 +129,12 @@
 - "<>" 버튼 클릭 시 SmallAlbum 화면이 6개씩 넘어가도록 로직 추가
 - main-comonents-LargeAlbum.js 에서 useref로 시간의흐름에따라 index변
 - LargeAlbumData.json에 데이터 변수명변경및 JS에서 사진 하드 코딩이아닌CSS로 주는거 실패
+- HeaderSeachBar 컴포넌트 안에 '급상승' 태그 main페이지로 이동 (waermelon ticket page에는 급상승이 필요없음)
+- watermelon 페이지와 watermelon ticket페이지 연동
+- watermelon ticket페이지 TicketTopHeader 생성
+- watermelon ticket페이지 TicketTopHeaderSideBanner 구성 잡고, 이미지 파일 넣었으나 버튼구현 (미완성)
+- watermelon ticket페이지 Header 전체적인 CSS 수정
+- ticket page에 concertSlideBanner.js 에서 concertOneBanner.js로 데이터 전송하는 로직(미완성)
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -131,4 +142,7 @@
 - mockData 갯수를 smallAlbum으로 보여지는 갯수만큼 나누어 "<>" 버튼으로 보여줄 수 있는 페이지 갯수 관련 로직 추가
 - SmallAlbum 컴포넌트 hover 시 title 왼쪽으로 흐르는 animation 적용
 -  src-components-LargeAlbum [<id:#img:#>...]로 export
--  -main-comonents-LargeAbum 사진 컴포넌트 및 index버튼 state값추가전
+-main-comonents-LargeAbum 사진 컴포넌트 및 index버튼 state값추가전
+- concertSlideBanner.js -> SlideConcert.js 로 파일 변경
+- concertOneBanner.js -> InnerConcertBanner.js 로 파일 변경
+- InnerConcertBanner.js 안에 슬라이드 넘어가는 로직 생성(미완성)

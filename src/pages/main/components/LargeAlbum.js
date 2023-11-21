@@ -1,5 +1,6 @@
 //박제업 앨범
 // 1페어 이영록 장지영
+
 import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
