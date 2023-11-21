@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import ConcertSlideBanner from './component/ConcertSlideBanner/ConcertSlideBanner';
+import SildeConcertBanner from './component/ConcertSlideBanner/SlideConcertBanner';
 
 const Ticketpage = () => {
     return (
@@ -10,7 +10,7 @@ const Ticketpage = () => {
                 <SlideBannerDiv>
                     <TopSildeBanner></TopSildeBanner>
                     <BottomSlideBanner>
-                        <ConcertSlideBanner />
+                        <SildeConcertBanner />
                     </BottomSlideBanner>
                 </SlideBannerDiv>
             </TicketWrapper>
