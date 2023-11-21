@@ -51,11 +51,11 @@
   - TopFooter 안 워터멜론 둘러보기 ~ 고객센터 생성
   - Footer에 이용약관 작성
   - 전체적인 CSS정리
-  - PopularContentsContainer 생성
+- PopularContentsContainer 생성
   - HTML 구조 작성
-  - 최신 앨범 section 컴포넌트 생성
+- 최신 앨범 section 컴포넌트 생성
   - 최신 앨범 데이터 length만큼의 imageBox가 보여지도록 HTML/CSS 적용
-  - promotions 컴포넌트에 생성
+- promotions 컴포넌트에 생성
    - 이미지 추가 및 link태그 URL 속성값 적용
       (이미지 파일을 추가하여 경로를 지정하고 싶은데 생각대로 되지 않아서 일단 URL로 연결)
    -멜론 홈페이지에 개발자 도구를 켜서 Elements를 보면서 하고있습니다
