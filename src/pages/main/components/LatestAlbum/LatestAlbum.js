@@ -14,13 +14,13 @@ const LatestAlbum = () => {
                 <Styled.CategoryBox>
                     <Styled.Category>
                         <Styled.CategoryName>
-                            <a onclick={() => {}}>전체</a>
+                            <a onClick={() => {}}>전체</a>
                         </Styled.CategoryName>
                         <Styled.CategoryName>
-                            <a onclick={() => {}}>국내</a>
+                            <a onClick={() => {}}>국내</a>
                         </Styled.CategoryName>
                         <Styled.CategoryName>
-                            <a onclick={() => {}}>해외</a>
+                            <a onClick={() => {}}>해외</a>
                         </Styled.CategoryName>
                         <CategoryIndex>1/9</CategoryIndex>
                         <button>&lt;</button>

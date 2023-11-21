@@ -40,7 +40,7 @@
 - HeaderSearchChart 생성
   - Mock data의 큰 차트를 map을 활용하여 보여주기
   - 급상승 랭킹 / 3초마다 변경하는 로직 짜기
-    - useState로 mock data를 받아옴
+   - useState로 mock data를 받아옴
     - useRef로 인덱스 값과 빈 배열 선어
     - seInterval을 활용하여 3초마다 랭킹을 변경해준다
     - 렌더링 . 시화면에 하나씩 보여주기 위해 return에 clearInterval을 줌
@@ -48,11 +48,14 @@
   - TopFooter 안 워터멜론 둘러보기 ~ 고객센터 생성
   - Footer에 이용약관 작성
   - 전체적인 CSS정리
-- 최신 앨범 section 컴포넌트 생성
+  - PopularContentsContainer 생성
+  - HTML 구조 작성
+  - 최신 앨범 section 컴포넌트 생성
   - 최신 앨범 데이터 length만큼의 imageBox가 보여지도록 HTML/CSS 적용
   - promotions 컴포넌트에 생성
-    - 이미지 추가 및 link태그 URL 속성값 적용
+   - 이미지 추가 및 link태그 URL 속성값 적용
       (이미지 파일을 추가하여 경로를 지정하고 싶은데 생각대로 되지 않아서 일단 URL로 연결)
+
  
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -61,6 +64,11 @@
 - Header에 하위 메뉴 생성
 - MainBanner -> (사이트 이벤트를 보여주는 배너) 생성 (평범한 이미지 넣기)
 - 하단 공지사항 생성
+
+- PopularContentsContainer
+  - CSS 적용
+  - PopularContents 임시 이미지 링크 적용
+
 - LatestAlbum List가 mockData의 length만큼 보여지기 때문에 6개의 리스트만 보여지도록 수정
 - mockData의 image와 singer 데이터 받아오기
 - singerName 컴포넌트 CSS 적용
@@ -88,10 +96,20 @@
 - "<>" 버튼의 기능을 구현하였지만, console은 찍히고 화면에서는 보여지지않아서 다시 해볼 예정
 - 최신앨범 hover 시 글자의 투명도가 같이 변경되는 CSS 수정
 
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 2023-11-19
 
+- ContentsData.json 생성
+- PopularContentsContainer
+  - PopularContents 이미지, 타이틀 내용 반영
+
+## 2023-11-20
+
+- PopularContents
+  - 이미지 6개로 분할
+  - ellipsis CSS 적용
 - 페어별 PR, Review 작성
 - 페어와 컴포넌트를 나누어 작업한 영역 이미지 위치가 상이하여 css 수정
 - mockData를 제대로 받아오지 못하는 것 같아서 SmallAlbum 컴포넌트에 추가하여 관련 코드 수정
@@ -108,3 +126,4 @@
 ## 2023-11-21
 - mockData 갯수를 smallAlbum으로 보여지는 갯수만큼 나누어 "<>" 버튼으로 보여줄 수 있는 페이지 갯수 관련 로직 추가
 - SmallAlbum 컴포넌트 hover 시 title 왼쪽으로 흐르는 animation 적용
+

@@ -7,7 +7,6 @@ import MockLargeAlbumData from '../../../mock/LargeAlbumData.json';
 const LargeAlbum = () => {
     const Datas = MockLargeAlbumData.LargeAlbumData;
     console.log(Datas[0].image);
-
     return (
         <Styled.Wrapper>
             <Styled.EventList>
