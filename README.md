@@ -129,7 +129,7 @@
 - "<>" 버튼 클릭 시 SmallAlbum 화면이 6개씩 넘어가도록 로직 추가
 - main-comonents-LargeAlbum.js 에서 useref로 시간의흐름에따라 index변
 - LargeAlbumData.json에 데이터 변수명변경및 JS에서 사진 하드 코딩이아닌CSS로 주는거 실패
-- HeaderSeachBar 컴포넌트 안에 '급상승' 태그 main페이지로 이동 (waermelon ticket page에는 급상승이 필요없음)
+- HeaderSeachBar 컴포넌트 안에 '급상승' 태그 main페이지로 이동 (watermelon ticket page에는 급상승이 필요없음)
 - watermelon 페이지와 watermelon ticket페이지 연동
 - watermelon ticket페이지 TicketTopHeader 생성
 - watermelon ticket페이지 TicketTopHeaderSideBanner 구성 잡고, 이미지 파일 넣었으나 버튼구현 (미완성)
