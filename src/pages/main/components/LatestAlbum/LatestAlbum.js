@@ -33,11 +33,9 @@ const LatestAlbum = () => {
     return (
         <Styled.Wrapper>
             <Styled.LatestTitle>
-
                 <Styled.Title>
                     최신 앨범 <Arrow>&gt;</Arrow>
                 </Styled.Title>
-
                 <Styled.CategoryBox>
                     <Styled.Category>
                         <Styled.CategoryName>
@@ -68,7 +66,6 @@ const LatestAlbum = () => {
                     </Styled.Category>
                 </Styled.CategoryBox>
             </Styled.LatestTitle>
-
             <Styled.SmallAlbumContainer>
                 <SmallAlbum
                     currentIndex={slideAlbumListIndex}
@@ -76,7 +73,6 @@ const LatestAlbum = () => {
                     key={slideAlbumListIndex}
                 />
             </Styled.SmallAlbumContainer>
-
         </Styled.Wrapper>
     );
 };
@@ -94,12 +90,10 @@ const LatestTitle = styled.div`
     align-items: center;
     height: 24px;
     margin-top: 18px;
-
 `;
 const Title = styled.h5`
     font-weight: 900;
     cursor: pointer;
-
 `;
 const Arrow = styled.span`
     font-weight: lighter;

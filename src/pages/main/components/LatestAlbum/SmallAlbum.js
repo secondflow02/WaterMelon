@@ -2,8 +2,8 @@
 
 import styled, { keyframes } from 'styled-components';
 
-
 export const albumdata = [
+
 
     {
         image: 'https://cdnimg.melon.co.kr/cm2/album/images/113/65/621/11365621_20231115141741_500.jpg?039040c6decae7b1fd9aaa7107049299/melon/resize/156/quality/80/optimize',
@@ -84,6 +84,7 @@ console.log(albumdata);
 const SmallAlbum = ({ currentIndex, categoryData }) => {
     return (
         <Styled.SmallAlbumList>
+
             {albumdata
                 .slice(currentIndex, currentIndex + 6)
                 .map((album, index) => (
@@ -102,6 +103,7 @@ const SmallAlbum = ({ currentIndex, categoryData }) => {
                     </Styled.Box>
                 ))}
 
+
         </Styled.SmallAlbumList>
     );
 };
@@ -116,6 +118,7 @@ const SmallAlbumList = styled.div`
 const Box = styled.div`
     width: 150px;
     height: 150px;
+
     margin-bottom: 10px;
     box-sizing: border-box;
     border: 1px solid black;
@@ -199,6 +202,7 @@ const TextEffect = styled.span`
     animation: ${leftFlowAnimation} 5s linear infinite;
 
 `;
+
 const SingerName = styled.div`
     width: 100%;
     height: 22px;
