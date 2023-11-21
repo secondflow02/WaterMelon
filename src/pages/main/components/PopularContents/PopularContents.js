@@ -4,13 +4,13 @@ import contentsData from "../../../../mock/contentsData.json";
 import styled from "styled-components";
 
 
-// 인기 있어요 내부 컨텐츠
+// 인기있어요 내부 컨텐츠
 const PopularContents = () => {
     return (
         <>
         {contentsData.contentsdata
-                            .slice(0, 6)
-                            .map((el, index) => (
+                            .slice(0, 6) // 총 12개의 데이터 중 6개의 데이터만 반영 -> 이후 6개씩 나눠 2페이지로 전환하는 버튼 구현 예정
+                            .map((el, index) => ( // 내부 컨텐츠를 contentsData.json 에서 가져와 map 으로 뿌려줌
                                 <DL>
                                     <MOV_AREA>
                                         <a href=";">
@@ -87,13 +87,11 @@ const DT = styled.dt`
 
 const TITLE = styled.span`
     display: block;
-    letter-spacing: 0;
     cursor: pointer;
     margin: 0;
     padding: 0;
     border: 0;
     height: 16px;
-    font: inherit;
     font-weight: bold;
     color: #333;
     margin-top: 6px;
@@ -105,13 +103,11 @@ const TITLE = styled.span`
 `;
 
 const ELIPSIS = styled.span`
-    letter-spacing: 0;
     color: #888;
     cursor: pointer;
     margin: 0;
     padding: 0;
     border: 0;
-    font: inherit;
     display: block;
     width: 200px;
     height: 16px;
@@ -122,19 +118,14 @@ const ELIPSIS = styled.span`
 `;
 
 const VIEW_NO = styled.dd`
-    letter-spacing: 0;
-    -webkit-text-size-adjust: none;
-    list-style: none;
     margin: 0;
     padding: 0;
     border: 0;
-    font: inherit;
-    vertical-align: baseline;
     overflow: hidden;
     width: 223px;
     margin-top: 2px;
     font-size: 11px;
     font-family: 'Dotum', 'Apple Gothic', sans-serif;
-    color: #888;
+    color: green;
     height: 14px;
 `;
