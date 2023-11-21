@@ -20,8 +20,10 @@ const MainPage = () => {
                     <LoginBox />
                 </Box>
                 <MainBanner />
-                <PopularContentsContainer />
-                <Charts />
+                <Box>
+                    <PopularContentsContainer />
+                    <Charts />
+                </Box>
                 <Notice />
             </Wrapper>
         </>
