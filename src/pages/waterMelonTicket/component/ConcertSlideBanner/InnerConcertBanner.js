@@ -8,6 +8,7 @@ const InnerConcertBanner = data => {
         const interval = setInterval(() => {
             handleNextSlide();
         }, 4000);
+
         return () => clearInterval(interval);
     }, [currentIndex]);
 
@@ -20,6 +21,8 @@ const InnerConcertBanner = data => {
     const handleNextSlide = () => {
         setCurrentIndex(prev => (prev + 1) % data.data.length);
     };
+
+    let slideArr = [handlePrevSlide, ...data.data, handleNextSlide];
 
     // console.log(data.data.length);
 
@@ -44,8 +47,7 @@ const InnerBannerWrapper = styled.div`
     height: 300px;
     background-color: #893465;
     margin: 0 20px;
-    position: absolute;
-    opacity: 0;
+    /* position: absolute; */
 `;
 
 const OneBannerImgView = styled.div``;
