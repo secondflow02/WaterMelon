@@ -1,12 +1,12 @@
 //이슈뉴스 6개 전체감싼거
 // 2페어 차필우 허진욱
-import styled from "styled-components";
-import { flexAlignCenter, flexCenter } from "../../../../styles/common";
-import PopularContents from "./PopularContents"
+import styled from 'styled-components';
+
+import { flexAlignCenter } from '../../../../styles/common';
+import PopularContents from './PopularContents';
 
 // 인기있어요 컨테이너
 const PopularContentsContainer = () => {
-    albumData.albumdata.map((el, index) => console.log(el.image));
     return (
         <>
             <HotIssueConTainer>
@@ -50,7 +50,7 @@ const H2 = styled.h2`
     line-height: 15px;
     letter-spacing: -1px;
     font-weight: bold;
-    font-family: "맑은 고딕", "Malgun Gothic", "Apple Gothic", sans-serif;
+    font-family: '맑은 고딕', 'Malgun Gothic', 'Apple Gothic', sans-serif;
     border-bottom: 0.8px solid #dfe6e8;
     margin: 0;
 `;
@@ -72,7 +72,6 @@ const TXT_INTRO = styled.span`
     vertical-align: top;
 `;
 
-
 const SUB_LIST = styled.ul`
     color: #666;
     margin: 0;
@@ -84,7 +83,6 @@ const SUB_LIST = styled.ul`
 `;
 
 const ISSUE_LIST = styled.li`
-
     margin: 0;
     padding: 0;
     border: 0;
@@ -92,12 +90,10 @@ const ISSUE_LIST = styled.li`
     display: block;
 `;
 
-
 const WRAP_PAGE = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-
 `;
 const PAGE = styled.div``;
 const PAGE_NUM = styled.span`
@@ -105,12 +101,10 @@ const PAGE_NUM = styled.span`
     font-size: 12px;
     line-height: 17px;
     vertical-align: top;
-    font-family: arial, "돋움", "dotum", sans-serif, "Apple Gothic", sans-serif;
+    font-family: arial, '돋움', 'dotum', sans-serif, 'Apple Gothic', sans-serif;
 `;
-
 
 const WRAP_BTN = styled.span`
     vertical-align: top;
     margin-left: 3px;
-
 `;
