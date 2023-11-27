@@ -122,6 +122,7 @@ const Box = styled.div`
     border: 1px solid black;
     position: relative;
     background-color: black;
+
     cursor: pointer;
 `;
 const AlbumImage = styled.img`
@@ -166,6 +167,7 @@ const leftFlowAnimation = keyframes`
     100% {
         transform: translateX(-100%);
     }
+
 `;
 
 const TextEffect = styled.span`
