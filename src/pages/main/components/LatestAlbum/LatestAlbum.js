@@ -1,33 +1,57 @@
 //최신앨범...........6개들어갈거
-import React, { useState } from 'react';
+
+import { useState } from 'react';
 import styled from 'styled-components';
+
 import SmallAlbum, { albumdata } from './SmallAlbum';
+
 // 1페어 이영록 장지영
 const LatestAlbum = () => {
     const [slideAlbumListIndex, setSlideAlbumListtIndex] = useState(0);
     const [albumCategory, setAlbumCategory] = useState(albumdata);
 
     const albumListData = albumdata.length;
-    console.log(albumListData);
 
     const onClickPrevAlbum = () => {
         setSlideAlbumListtIndex(prev =>
             prev - 6 < 0 ? prev + albumListData - 6 : prev - 6,
         );
+        const categoryIndex =
+            Math.floor((slideAlbumListIndex - 6) / 6) >= 0
+                ? Math.floor((slideAlbumListIndex - 6) / 6)
+                : Math.floor((albumListData - 6) / 6);
+
+        const category =
+            albumdata[categoryIndex]?.category ||
+            albumCategory[0]?.category ||
+            '전체';
+        onClickFilterCategory(category);
     };
     const onClickNextAlbum = () => {
         setSlideAlbumListtIndex(prev =>
             prev + 6 >= albumListData ? 0 : prev + 6,
         );
+        const categoryIndex = Math.floor((slideAlbumListIndex + 6) / 6);
+        const nextCategoryIndex =
+            categoryIndex >= albumdata.length / 6 - 1 ? 0 : categoryIndex + 1;
+        const category =
+            albumdata[nextCategoryIndex]?.category ||
+            albumdata[0]?.category ||
+            '전체';
+        onClickFilterCategory(category);
     };
 
     const onClickFilterCategory = category => {
+        if (albumCategory[0]?.category === category) {
+            return;
+        }
         const filterAlbumCategory = albumdata.filter(
             album => album.category === category,
         );
         setAlbumCategory(filterAlbumCategory);
-        console.log(filterAlbumCategory);
+
         setSlideAlbumListtIndex(0);
+        console.log(filterAlbumCategory);
     };
 
     return (

@@ -1,5 +1,6 @@
 //김나영 (미니앨범 1개) 이영록,장지영
 
+import { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 export const albumdata = [
@@ -79,25 +80,29 @@ export const albumdata = [
 console.log(albumdata);
 
 const SmallAlbum = ({ currentIndex, categoryData }) => {
+    const [displayAlbum, setDisplayAlbum] = useState([]);
+
+    useEffect(() => {
+        const startIndex = currentIndex;
+        const endIndex = startIndex + 6;
+
+        setDisplayAlbum(categoryData.slice(startIndex, endIndex));
+    }, [currentIndex, categoryData]);
     return (
         <Styled.SmallAlbumList>
-            {albumdata
-                .slice(currentIndex, currentIndex + 6)
-                .map((album, index) => (
-                    <Styled.Box key={index}>
-                        <Styled.AlbumImage src={album.image} alt="앨범배경" />
-                        <Styled.SingerName>{album.singer}</Styled.SingerName>
-                        <Styled.AlbumInfo>
-                            <p>
-                                <Styled.TextEffect>
-                                    {album.title}
-                                </Styled.TextEffect>
-                                <br />
-                                {album.singer}
-                            </p>
-                        </Styled.AlbumInfo>
-                    </Styled.Box>
-                ))}
+            {displayAlbum.map((album, index) => (
+                <Styled.Box key={index}>
+                    <Styled.AlbumImage src={album.image} alt="앨범배경" />
+                    <Styled.SingerName>{album.singer}</Styled.SingerName>
+                    <Styled.AlbumInfo>
+                        <p>
+                            <Styled.TextEffect>{album.title}</Styled.TextEffect>
+                            <br />
+                            {album.singer}
+                        </p>
+                    </Styled.AlbumInfo>
+                </Styled.Box>
+            ))}
         </Styled.SmallAlbumList>
     );
 };
