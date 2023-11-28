@@ -7,18 +7,38 @@ const Charts = () => {
     return (
         <>
             <div class="chart" style={{ marginLeft: '24px' }}>
-                <div
-                    style={{
-                        display: 'grid',
-                        gridTemplateRows: '100px 200px',
-                        gridTemplateColumns: '1fr 2fr',
-                    }}
-                >
-                    <h2>
-                        <a href=""> 멜론 차트 > </a>
-                    </h2>
-                    <div>2023.11.27 23:00 기준</div>
-
+                <div>
+                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                        <h2>
+                            <a href="" style={{ marginRight: '40px' }}>
+                                {' '}
+                                멜론 차트{' '}
+                            </a>
+                        </h2>
+                        <div>2023.11.27 23:00 기준</div>
+                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                        }}
+                    >
+                        <button style={{ padding: '15px 20px 15px 20px' }}>
+                            TOP100
+                        </button>
+                        <button style={{ padding: '15px 20px 15px 20px' }}>
+                            POP
+                        </button>
+                        <button style={{ padding: '15px 20px 15px 20px' }}>
+                            ☆ 아티스트
+                        </button>
+                        <div
+                            style={{
+                                box: '50px',
+                                padding: '5px',
+                                margin: '15px',
+                            }}
+                        ></div>
+                    </div>
                     <div class="TOP100 chart"></div>
                     <ul>
                         <li class="TOP100">
