@@ -4,57 +4,28 @@
 import { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
-import LargeData from '../../../components/LargeAlbum';
+import { LargeData } from '../../../components/LargeAlbum';
+
 //image어떻게 찍히는 지 확인
-import Image1 from '../../../components/LargeAlbum';
+//import Image1 from '../../../components/LargeAlbum';
 // import img1 from 'https://cdnimg.melon.co.kr/svc/images/main/imgUrl20231114014430.jpg/melon/quality/80';
 
 const LargeAlbum = () => {
     //const [state, setState] = useState(LargeData.LargeData);
+    const [Data, setData] = useState(LargeData);
     const [startBtn, setStartBtn] = useState(false);
     let largeRef = useRef(0);
-    let albumRef = useRef([]);
-    //clearinterveal 똑바로 이해못함
-    // useEffect(() => {
-    //     setInterval(() => {
-    //         albumRef.current = LargeData.LargeData[largeRef.current];
-    //         console.log(largeRef.current);
-    //          largeRef.current++;
-    //         setState(state => albumRef.current);
-    //         if (largeRef.current > 3) {
-    //             largeRef.current = 0;
-    //         }
-    //     }, 4000);
-    //     return () => clearInterval(largeRef);
-    // }, [startBtn]);
-    //IF문으로사용할려고하는데 CONSOLE에서 0~3까지 게속찍힘
-    // if (startBtn === false) {
-    //     setInterval(() => {
-    //         albumRef.current = LargeData.LargeData[largeRef.current];
-    //         console.log(largeRef.current);
-    //         largeRef.current++;
-    //         setState(state => albumRef.current);
-    //         if (largeRef.current > 3) {
-    //             largeRef.current = 0;
-    //         }
-    //     }, 4000);
-    // }
-    // img를 컴포넌트로 안하고 여기에 불러오면 어떨가 해서 실험
-    // const LargeImg = [
-    //     { image: picture1 },
-    //     { image: picture2 },
-    //     { image: picture3 },
-    //     { image: picture4 },
-    // ];
-    // 3페어꺼 보고   clearinterval을빼먹은것을 알게됨
+    let album = [];
     useEffect(() => {
         if (startBtn === false) {
             const interval = setInterval(() => {
-                albumRef.current = LargeData[largeRef.current];
+                album.current = LargeData[largeRef.current];
+
                 console.log(largeRef.current);
                 largeRef.current++;
-                console.log(albumRef.current);
-                console.log(Image1);
+                console.log(LargeData[0].Image);
+                console.log(album.current.Image);
+                setData(Data => album.current);
                 //setState(state => albumRef.current);
                 if (largeRef.current > 3) {
                     largeRef.current = 0;
@@ -63,6 +34,10 @@ const LargeAlbum = () => {
             return () => clearInterval(interval);
         }
     }, [startBtn]);
+    //로딩이되자마자 이벤트 실행( use effect)=>count 흐름
+    // 버튼 클릭시 사진 변경(count마다 사진 변경그래야 movebtn 즉시 변화가능)
+    // (new함수 생성=>currnt변수들 집어넣을 (사진들)
+
     //state이용해서 해야되는데 생각만하고 못함 +정리
     const index0Btn = () => {
         largeRef.current = 0;
@@ -102,7 +77,7 @@ const LargeAlbum = () => {
                 </Styled.PlayContain>
 
                 <Styled.EventPart>
-                    <LargeData />
+                    <img src={Data.Image}></img>
                 </Styled.EventPart>
             </Styled.EventList>
         </Styled.Wrapper>
@@ -128,6 +103,7 @@ const EventPart = styled.a`
     width: 236px;
     height: 315px;
 `;
+
 //움직이는 버튼모음
 const PlayContain = styled.div`
     position: absolute;
