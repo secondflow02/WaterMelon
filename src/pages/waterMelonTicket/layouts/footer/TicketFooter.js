@@ -1,10 +1,16 @@
+import styled from 'styled-components';
+
 const TicketFooter = () => {
     return (
         <>
-            <div>
-                <h1>Footer</h1>
-            </div>
+            <Styled.Wrapper></Styled.Wrapper>
         </>
     );
 };
 export default TicketFooter;
+
+const Wrapper = styled.div``;
+
+const Styled = {
+    Wrapper,
+};
