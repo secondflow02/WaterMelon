@@ -48,15 +48,15 @@
   - Footer에 이용약관 작성
   - 전체적인 CSS정리
 - PopularContentsContainer 생성
-- HTML 구조 작성
-- 최신 앨범 section 컴포넌트 생성
-- 최신 앨범 데이터 length만큼의 imageBox가 보여지도록 HTML/CSS 적용
-- promotions 컴포넌트에 생성
-- 이미지 추가 및 link태그 URL 속성값 적용
-  (이미지 파일을 추가하여 경로를 지정하고 싶은데 생각대로 되지 않아서 일단 URL로 연결)
-- 멜론 홈페이지에 개발자 도구를 켜서 Elements를 보면서 하고있습니다.
 
----
+  - HTML 구조 작성
+- 최신 앨범 section 컴포넌트 생성
+  - 최신 앨범 데이터 length만큼의 imageBox가 보여지도록 HTML/CSS 적용
+- promotions 컴포넌트에 생성
+   - 이미지 추가 및 link태그 URL 속성값 적용
+      (이미지 파일을 추가하여 경로를 지정하고 싶은데 생각대로 되지 않아서 일단 URL로 연결)
+   -멜론 홈페이지에 개발자 도구를 켜서 Elements를 보면서 하고있습니다 
+----------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 2023-11-15
 
@@ -105,7 +105,11 @@
 
 - ContentsData.json 생성
 - PopularContentsContainer
-  - PopularContents 이미지, 타이틀 내용 반영
+- PopularContents 이미지, 타이틀 내용 반영
+- watermelon Ticket page 컴포넌트 상세화 (피그마 사용)
+- ![image](https://github.com/secondflow02/WaterMelon/assets/142880051/5eba5111-3757-417f-a238-99e6f3a78e68)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 2023-11-20
 
@@ -119,6 +123,14 @@
 - 최신앨범, 전체, 국내, 해외 부분에 포인터 적용
 - 국내, 해외 클릭 시 SmallAlbum data를 변경해주려 하였으나, console상으로 보여지지만 화면상으로는 보여지지 않음 (수정 필요)
 - "<>" 버튼 클릭 시 SmallAlbum 화면이 6개씩 넘어가도록 로직 추가
+- main-components-LargeAlbum.js 에서 useRef로 시간의흐름에따라 index변화
+- LargeAlbumData.json에 데이터 변수명 변경및 JS에서 사진 하드 코딩이아닌CSS로 주는거 실패
+- HeaderSeachBar 컴포넌트 안에 '급상승' 태그 main페이지로 이동 (watermelon ticket page에는 급상승이 필요없음)
+- watermelon 페이지와 watermelon ticket페이지 연동
+- watermelon ticket페이지 TicketTopHeader 생성
+- watermelon ticket페이지 TicketTopHeaderSideBanner 구성 잡고, 이미지 파일 넣었으나 버튼구현 (미완성)
+- watermelon ticket페이지 Header 전체적인 CSS 수정
+- ticket page에 concertSlideBanner.js 에서 concertOneBanner.js로 데이터 전송하는 로직(미완성)
 
 ---
 
@@ -132,3 +144,9 @@
 - LatestAlbum의 카테고리 및 prev/next 버튼 기능 구현중
   - 카테고리만 클릭하거나 prev/next 버튼만을 클릭하는 경우 이벤트가 작동하지만 카테고리 선택 후 버튼을 클릭하는 경우 해당 영역에 데이터가 나오지 않음
     (데이터가 없는 경우 카테고리가 넘어가도록 수정할 예정)
+- src-components-LargeAlbum [<id:#img:#>...]로 export
+- main-comonents-LargeAbum 사진 컴포넌트 및 index버튼 state값추가전
+- concertSlideBanner.js -> SlideConcert.js 로 파일 변경
+- concertOneBanner.js -> InnerConcertBanner.js 로 파일 변경
+- InnerConcertBanner.js 안에 슬라이드 넘어가는 로직 생성(미완성)
+

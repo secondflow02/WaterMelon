@@ -4,7 +4,6 @@
 import styled from 'styled-components';
 
 import serchbarIcon from '../../../imgs/logo/그림1.png';
-import { flexCenter } from '../../../styles/common';
 
 const HeaderSearchBar = () => {
     return (
@@ -16,11 +15,6 @@ const HeaderSearchBar = () => {
                         <Img src={serchbarIcon} />
                     </div>
                 </Container>
-                <div>
-                    <Box>
-                        <P>급상승</P>
-                    </Box>
-                </div>
             </Wrapper>
         </>
     );
@@ -56,18 +50,4 @@ const Img = styled.img`
     &:hover {
         cursor: pointer;
     }
-`;
-const Box = styled.div`
-    width: 50px;
-    height: 20px;
-    margin-top: 10px;
-    margin-left: 10px;
-    border-radius: 35px;
-    background-color: #8ec260;
-    ${flexCenter};
-`;
-
-const P = styled.p`
-    color: #fff;
-    font-size: 12px;
 `;

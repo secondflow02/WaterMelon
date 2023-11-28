@@ -1,17 +1,10 @@
-//멜론티켓~공지사항
-// 3페어 최하영 김진솔
-
 import { useNavigate } from 'react-router-dom';
-import { styled } from 'styled-components';
+import styled from 'styled-components';
+import { flexAlignCenter, flexCenter } from 'styles/common';
 
-import { flexAlignCenter, flexCenter } from '../../../styles/common';
-
-const TopHeader = () => {
+//로그인 회원가입 고객센터 이용안내
+const TicketTopHeader = () => {
     const navigate = useNavigate();
-    // const onWaterMelonTicketMove = () => {
-    //     navigate('/water');
-    // }
-
     return (
         <>
             <Wrapper>
@@ -20,26 +13,29 @@ const TopHeader = () => {
                         <Ul>
                             <Li
                                 onClick={() => {
-                                    navigate('/ticketpage');
+                                    navigate('');
                                 }}
                             >
-                                <A>워터멜론티켓</A>
+                                <A>워터멜론</A>
                             </Li>
                         </Ul>
                     </Container>
                     <Container>
                         <Ul>
                             <Li>
-                                <A href="#">이용권구매</A>
+                                <A href="#">로그인 |</A>
                             </Li>
                             <Li>
-                                <A href="#">워터멜론라운지</A>
+                                <A href="#"> 회원가입 |</A>
                             </Li>
                             <Li>
-                                <A href="#">이벤트</A>
+                                <A href="#"> 고객센터 |</A>
                             </Li>
                             <Li>
-                                <A href="#">공지사항</A>
+                                <A href="#"> 이용안내 |</A>
+                            </Li>
+                            <Li>
+                                <A href="#">한국말</A>
                             </Li>
                         </Ul>
                     </Container>
@@ -48,13 +44,11 @@ const TopHeader = () => {
         </>
     );
 };
-export default TopHeader;
-
+export default TicketTopHeader;
 const Wrapper = styled.div`
     width: 100%;
     height: 38px;
-    ${flexCenter}
-    border-bottom: 1px solid #ccc;
+    ${flexCenter};
 `;
 
 const Box = styled.div`
@@ -78,7 +72,8 @@ const Li = styled.li`
 
 const A = styled.a`
     text-decoration: none;
-    color: #999;
+    color: #000;
+    font-weight: 700;
     &:hover {
         cursor: pointer;
         color: #8ec260;

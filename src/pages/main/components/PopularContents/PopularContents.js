@@ -4,34 +4,38 @@ import styled from "styled-components";
 
 import contentsData from "../../../../mock/contentsData.json";
 
-
 // 인기있어요 내부 컨텐츠
 const PopularContents = () => {
     return (
         <>
-        {contentsData.contentsdata
-                            .slice(0, 6) // 총 12개의 데이터 중 6개의 데이터만 반영 -> 이후 6개씩 나눠 2페이지로 전환하는 버튼 구현 예정
-                            .map((el, index) => ( // 내부 컨텐츠를 contentsData.json 에서 가져와 map 으로 뿌려줌
-                                <DL>
-                                    <MOV_AREA>
-                                        <a href=";">
-                                            <IMG src={el.image} alt="" />
-                                            <BG_ALBUM_FRAME></BG_ALBUM_FRAME>
-                                        </a>
-                                    </MOV_AREA>
-                                    <DT>
-                                        <TITLE>{el.title}</TITLE>
-                                        <ELIPSIS>{el.singer}</ELIPSIS>
-                                    </DT>
-                                    <VIEW_NO>
-                                        <span>{el.category}</span>
-                                    </VIEW_NO>
-                                </DL>
-                            ))}
+            {contentsData.contentsdata
+                .slice(0, 6) // 총 12개의 데이터 중 6개의 데이터만 반영 -> 이후 6개씩 나눠 2페이지로 전환하는 버튼 구현 예정
+                .map(
+                    (
+                        el,
+                        index, // 내부 컨텐츠를 contentsData.json 에서 가져와 map 으로 뿌려줌
+                    ) => (
+                        <DL>
+                            <MOV_AREA>
+                                <a href=";">
+                                    <IMG src={el.image} alt="" />
+                                    <BG_ALBUM_FRAME></BG_ALBUM_FRAME>
+                                </a>
+                            </MOV_AREA>
+                            <DT>
+                                <TITLE>{el.title}</TITLE>
+                                <ELIPSIS>{el.singer}</ELIPSIS>
+                            </DT>
+                            <VIEW_NO>
+                                <span>{el.category}</span>
+                            </VIEW_NO>
+                        </DL>
+                    ),
+                )}
         </>
-    )
-}
-export default PopularContents
+    );
+};
+export default PopularContents;
 
 const DL = styled.dl`
     color: #666;
@@ -126,7 +130,6 @@ const VIEW_NO = styled.dd`
     width: 223px;
     margin-top: 2px;
     font-size: 11px;
-    font-family: 'Dotum', 'Apple Gothic', sans-serif;
     color: green;
     height: 14px;
 `;

@@ -117,6 +117,7 @@ const SmallAlbumList = styled.div`
 const Box = styled.div`
     width: 150px;
     height: 150px;
+
     margin-bottom: 10px;
     box-sizing: border-box;
     border: 1px solid black;
@@ -154,7 +155,6 @@ const AlbumInfo = styled.div`
     justify-content: center;
     align-items: center;
     overflow: hidden;
-
     ${Box}:hover & {
         opacity: 1;
         background-color: rgba(0, 0, 0, 0.7);
@@ -178,6 +178,7 @@ const TextEffect = styled.span`
     overflow: hidden;
     animation: ${leftFlowAnimation} 5s linear infinite;
 `;
+
 const SingerName = styled.div`
     width: 100%;
     height: 22px;
