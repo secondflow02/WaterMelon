@@ -7,14 +7,6 @@ import styled from 'styled-components';
 import { flexCenter } from 'styles/common';
 
 const TicketTopHeaderSideBanner = () => {
-    // const slideRef = useRef(null);
-    // const [currentImgOrder, setCurrentImgOrder] = useState(0);
-    // console.log(currentImgOrder, 'test0');
-    // useEffect(() => {
-    //     slideRef.current.style.transition = 'all 0.5s ease-in-out';
-    //     slideRef.current.style.transform = `translateX(-240px)`;
-    // }, [currentImgOrder]);
-
     //사진들 배열 상태
     const [image, setImage] = useState([photo1, photo2, photo3]);
     //사진 index값 상태태
@@ -27,8 +19,9 @@ const TicketTopHeaderSideBanner = () => {
         setImage(image[count]);
     };
     const onMovePrevBanner = () => {
-        // if (currentImgOrder === 0) return;
-        // setCurrentImgOrder(currentImgOrder - 1);
+        if (count === 0) return;
+        setCount(count - 1);
+        setImage(image[count]);
     };
 
     return (

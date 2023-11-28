@@ -70,12 +70,15 @@ const LargeAlbum = () => {
     };
     const index1Btn = () => {
         largeRef.current = 1;
+        console.log(largeRef.current);
     };
     const index2Btn = () => {
         largeRef.current = 2;
+        console.log(largeRef.current);
     };
     const index3Btn = () => {
         largeRef.current = 3;
+        console.log(largeRef.current);
     };
     const onStartBtn = () => {
         setStartBtn(prev => !prev);
@@ -86,20 +89,11 @@ const LargeAlbum = () => {
             <Styled.EventList>
                 <Styled.PlayContain>
                     <Styled.MoveContain>
-                        <Styled.MoveBtn>
-                            <button onClick={index0Btn}>o</button>
-                        </Styled.MoveBtn>
-                        <Styled.MoveBtn>
-                            <button onClick={index1Btn}>o</button>
-                        </Styled.MoveBtn>
-                        <Styled.MoveBtn>
-                            <button onClick={index2Btn}>o</button>
-                        </Styled.MoveBtn>
-                        <Styled.MoveBtn>
-                            <button onClick={index3Btn}>o</button>
-                        </Styled.MoveBtn>
+                        <Styled.MoveBtn onClick={index0Btn}>o</Styled.MoveBtn>
+                        <Styled.MoveBtn onClick={index1Btn}>o</Styled.MoveBtn>
+                        <Styled.MoveBtn onClick={index2Btn}>o</Styled.MoveBtn>
+                        <Styled.MoveBtn onClick={index3Btn}>o</Styled.MoveBtn>
                     </Styled.MoveContain>
-
                     <Styled.PlayBtn>
                         <button onClick={onStartBtn}>
                             {startBtn ? '>' : '='}
@@ -107,7 +101,9 @@ const LargeAlbum = () => {
                     </Styled.PlayBtn>
                 </Styled.PlayContain>
 
-                <Styled.EventPart></Styled.EventPart>
+                <Styled.EventPart>
+                    <LargeData />
+                </Styled.EventPart>
             </Styled.EventList>
         </Styled.Wrapper>
     );
@@ -153,6 +149,10 @@ const MoveBtn = styled.a`
     width: 10px;
     height: 10px;
     margin: 0;
+    color: #d8d8d8;
+    &:hover {
+        color: black;
+    }
 `;
 
 const Styled = {
