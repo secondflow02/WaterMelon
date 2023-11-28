@@ -1,8 +1,8 @@
 // 인기있어요
 // 2페어 허진욱
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import contentsData from '../../../../mock/contentsData.json';
+import contentsData from "../../../../mock/contentsData.json";
 
 // 인기있어요 내부 컨텐츠
 const PopularContents = () => {
