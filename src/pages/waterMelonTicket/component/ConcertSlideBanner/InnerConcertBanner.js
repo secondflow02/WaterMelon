@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const InnerConcertBanner = data => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -8,7 +8,6 @@ const InnerConcertBanner = data => {
         const interval = setInterval(() => {
             handleNextSlide();
         }, 4000);
-
         return () => clearInterval(interval);
     }, [currentIndex]);
 
@@ -28,21 +27,44 @@ const InnerConcertBanner = data => {
 
     return (
         <>
+            {/* 두개를 연결하기 위해 두번 뿌려줌
+                더 좋은 방법이 있을듯 하다...
+            */}
             {data.data.map((el, index) => (
-                <InnerBannerWrapper>
-                    <OneBannerImgView></OneBannerImgView>
-                    <OnBannerContainer key={index}>
+                <Styled.InnerBannerWrapper>
+                    <Styled.OneBannerImgView />
+                    <Styled.OneBannerContainer key={index}>
+                        <Styled.H3>{el.title}</Styled.H3>
+                        <Styled.P> {el.subTitle} </Styled.P>
+                    </Styled.OneBannerContainer>
+                </Styled.InnerBannerWrapper>
+            ))}
+            {data.data.map((el, index) => (
+                <Styled.InnerBannerWrapper>
+                    <Styled.OneBannerImgView />
+                    <Styled.OneBannerContainer key={index}>
                         <H3>{el.title}</H3>
                         <P> {el.subTitle} </P>
-                    </OnBannerContainer>
-                </InnerBannerWrapper>
+                    </Styled.OneBannerContainer>
+                </Styled.InnerBannerWrapper>
             ))}
         </>
     );
 };
 
 export default InnerConcertBanner;
+
+const animation = keyframes`
+    0% {
+        transform: translateX(480%);
+    }
+    100% {
+        transform: translateX(-720%);
+    }
+`;
+
 const InnerBannerWrapper = styled.div`
+    animation: ${animation} 20s linear infinite;
     width: 200px;
     height: 300px;
     background-color: #893465;
@@ -52,8 +74,16 @@ const InnerBannerWrapper = styled.div`
 
 const OneBannerImgView = styled.div``;
 
-const OnBannerContainer = styled.div``;
+const OneBannerContainer = styled.div``;
 
 const H3 = styled.h3``;
 
 const P = styled.p``;
+
+const Styled = {
+    InnerBannerWrapper,
+    OneBannerImgView,
+    OneBannerContainer,
+    H3,
+    P,
+};
