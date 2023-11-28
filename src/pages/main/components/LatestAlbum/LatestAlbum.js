@@ -66,7 +66,6 @@ const LatestAlbum = () => {
                             <a onClick={() => {}}>전체</a>
                         </Styled.CategoryName>
                         <Styled.CategoryName>
-
                             <a onClick={() => onClickFilterCategory('국내')}>
                                 국내
                             </a>
@@ -75,7 +74,6 @@ const LatestAlbum = () => {
                             <a onClick={() => onClickFilterCategory('해외')}>
                                 해외
                             </a>
-
                         </Styled.CategoryName>
                         <Styled.CategoryIndex>
                             <Styled.CategoryIndex>
