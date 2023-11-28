@@ -3,6 +3,7 @@ import { flexCenter } from 'styles/common';
 
 import SildeConcertBanner from './component/ConcertSlideBanner/SlideConcertBanner';
 import SoloConcertBanner from './component/SoloConcertBanner';
+import TicketOpen_RankingContainer from './component/TicketOpen_RankingContainer/TicketOpen_RankingContainer';
 import WaterMelonTicketPick from './component/WatermelonTicketPick';
 
 const Ticketpage = () => {
@@ -17,6 +18,7 @@ const Ticketpage = () => {
                     </BottomSlideBanner>
                 </SlideBannerDiv>
                 <SoloConcertBanner />
+                <TicketOpen_RankingContainer />
                 <PickContainer>
                     <WaterMelonTicketPick />
                 </PickContainer>

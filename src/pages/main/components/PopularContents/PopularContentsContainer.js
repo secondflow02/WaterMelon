@@ -40,7 +40,6 @@ const HotIssueConTainer = styled.div`
     height: 472px;
     margin-top: 32px;
     margin-bottom: 49px;
-    margin-right: 106.14px;
 `;
 
 const H2 = styled.h2`

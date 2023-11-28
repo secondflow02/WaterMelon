@@ -97,10 +97,12 @@ const LatestAlbum = () => {
                             </Styled.A>
                         </Styled.CategoryName>
                         <Styled.CategoryName>
+
                             <Styled.A
                                 href="#"
                                 onClick={() => onClickFilterCategory('국내')}
                             >
+
                                 국내
                             </Styled.A>
                         </Styled.CategoryName>
@@ -110,7 +112,9 @@ const LatestAlbum = () => {
                                 onClick={() => onClickFilterCategory('해외')}
                             >
                                 해외
+
                             </Styled.A>
+
                         </Styled.CategoryName>
                         <Styled.CategoryIndex>
                             <Styled.CategoryIndex>
