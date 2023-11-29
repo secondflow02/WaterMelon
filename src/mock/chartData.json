@@ -1,54 +1,74 @@
 {
     "chartdata": [
         {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "The Best of the 80's",
-            "singer": "Various Artists"
+            "ranking": 1,
+            "rankingChange": "-0",
+            "title": "Perfect Night",
+            "singer": "LE SSERAFIM (르세라핌)",
+            "image": "/imgs/album/짱구배경.PNG"
         },
         {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "Summer",
-            "singer": "Joe Hisaishi"
+            "ranking": 1,
+            "rankingChange": "-0",
+            "title": "Perfect Night",
+            "singer": "LE SSERAFIM (르세라핌)",
+            "image": "/imgs/짱구배경.PNG"
         },
         {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "Waving Through A Window",
-            "singer": "Ben Platt"
+            "ranking": 1,
+            "rankingChange": "-0",
+            "title": "Perfect Night",
+            "singer": "LE SSERAFIM (르세라핌)",
+            "image": "/imgs/짱구배경.PNG"
         },
         {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "GROWING IP IS ____",
-            "singer": "Ruel"
+            "ranking": 1,
+            "rankingChange": "-0",
+            "title": "Perfect Night",
+            "singer": "LE SSERAFIM (르세라핌)",
+            "image": "/imgs/짱구배경.PNG"
         },
         {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "Ghost Town",
-            "singer": "Benson Boone"
+            "ranking": 1,
+            "rankingChange": "-0",
+            "title": "Perfect Night",
+            "singer": "LE SSERAFIM (르세라핌)",
+            "image": "/imgs/짱구배경.PNG"
         },
         {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "Memories",
-            "singer": "Conan Gray"
+            "ranking": 1,
+            "rankingChange": "-0",
+            "title": "Perfect Night",
+            "singer": "LE SSERAFIM (르세라핌)",
+            "image": "/imgs/짱구배경.PNG"
         },
         {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "One",
-            "singer": "Ed Sheeran"
+            "ranking": 1,
+            "rankingChange": "-0",
+            "title": "Perfect Night",
+            "singer": "LE SSERAFIM (르세라핌)",
+            "image": "/imgs/짱구배경.PNG"
         },
         {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "I.O.U",
-            "singer": "Carry & Ron"
+            "ranking": 1,
+            "rankingChange": "-0",
+            "title": "Perfect Night",
+            "singer": "LE SSERAFIM (르세라핌)",
+            "image": "/imgs/짱구배경.PNG"
         },
         {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "Masquerade",
-            "singer": "Elina"
+            "ranking": 1,
+            "rankingChange": "-0",
+            "title": "Perfect Night",
+            "singer": "LE SSERAFIM (르세라핌)",
+            "image": "/imgs/짱구배경.PNG"
         },
         {
-            "image": "/imgs/짱구배경.PNG",
-            "title": "Batter then this",
-            "singer": "Lauv"
+            "ranking": 1,
+            "rankingChange": "-0",
+            "title": "Perfect Night",
+            "singer": "LE SSERAFIM (르세라핌)",
+            "image": "/imgs/짱구배경.PNG"
         }
     ]
 }
