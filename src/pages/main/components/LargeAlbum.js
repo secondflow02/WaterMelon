@@ -161,6 +161,7 @@ const PlayContain = styled.div`
 //시작 정지 버튼
 const PlayBtn = styled.a`
     margin-left: 10px;
+    cursor: pointer;
 `;
 //움직이는 버튼 모음
 const MoveContain = styled.div`
@@ -173,6 +174,7 @@ const MoveBtn = styled.a`
     height: 10px;
     margin: 0;
     color: #d8d8d8;
+    cursor: pointer;
     &:hover {
         color: black;
     }
