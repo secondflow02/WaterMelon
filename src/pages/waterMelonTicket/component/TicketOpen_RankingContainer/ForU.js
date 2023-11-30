@@ -13,7 +13,7 @@ const ForU = () => {
                     <Styled.H2>ForU</Styled.H2>
                     <Styled.Ul>
                         <Styled.Li>
-                            <Styled.A>더보기</Styled.A>
+                            <Styled.A>더보기&gt;</Styled.A>
                         </Styled.Li>
                     </Styled.Ul>
                 </Styled.Container>
@@ -21,17 +21,20 @@ const ForU = () => {
                     <Styled.TextContainer>
                         <Styled.Span>당신을 위한 맞춤 공연</Styled.Span>
                         <br></br>
-                        <Strong>나에게 딱 맞는</Strong>
-                        <Span1>공연 추천</Span1>
-                        <Strong>과</Strong>
+                        <Styled.Strong>나에게 딱 맞는</Styled.Strong>
+                        <Styled.Span1>공연 추천</Styled.Span1>
+                        <Styled.Strong>과</Styled.Strong>
                         <br></br>
-                        <Span1>공연 스케줄 관리</Span1>
-                        <Strong>를 시작해보세요!</Strong>
+                        <Styled.Span1>공연 스케줄 관리</Styled.Span1>
+                        <Styled.Strong>를 시작해보세요!</Styled.Strong>
                     </Styled.TextContainer>
 
                     <Styled.ImgContainer>
                         <Styled.Img src={photo1} />
                     </Styled.ImgContainer>
+                    <Styled.Buttoncontainer>
+                        <Styled.Abutton href="#">ForU 시작하기</Styled.Abutton>
+                    </Styled.Buttoncontainer>
                 </Styled.ForUBox>
             </Styled.Wrapper>
         </>
@@ -70,13 +73,32 @@ const Li = styled.li`
     text-decoration: none;
     list-style: none;
 `;
-const A = styled.a``;
+const A = styled.a`
+    ${flexCenter}
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+
+    cursor: pointer;
+`;
 const ImgContainer = styled.div`
     ${flexCenter}
 `;
 
 const Img = styled.img`
     width: 260px;
+`;
+const Buttoncontainer = styled.div`
+    ${flexCenter}
+    height: 45px;
+    width: 100px;
+    text-align: center;
+    border: 2px solid #000;
+`;
+const Abutton = styled.a`
+    color: #333;
+    font-size: 15px;
+    text-decoration: none;
 `;
 
 const Styled = {
@@ -87,7 +109,10 @@ const Styled = {
     ImgContainer,
     ForUBox,
     Img,
+    Buttoncontainer,
+    Abutton,
     Span,
+    Span1,
     H2,
     Ul,
     Li,

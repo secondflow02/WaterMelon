@@ -3,26 +3,36 @@ import styled from 'styled-components';
 import { flexCenter } from 'styles/common';
 
 const InnerConcertBanner = ({ data }) => {
-    const copyData = [...data, ...data];
-
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [count, setCount] = useState(0);
+    const [visibleData, setVisibleData] = useState(data.ticketdata);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex(prev => (prev + 1) % data.length);
-        }, 1000);
+            setCurrentIndex(prev => (prev + 1) % visibleData.length);
+
+            if (currentIndex === currentIndex) {
+                data.ticketdata.push(data.ticketdata[count]);
+                setCount(count + 1);
+                if (count === 9) {
+                    setCount(0);
+                }
+            }
+
+            console.log(visibleData);
+        }, 4000);
         return () => clearInterval(interval);
-    }, [currentIndex, data.length]);
+    }, [visibleData.length]);
 
     return (
         <>
             <Styled.Wrapper>
-                {copyData.map((el, index) => (
+                {visibleData.map((el, index) => (
                     <Styled.InnerBannerContainer
                         key={index}
                         style={{
                             transform: `translateX(${
-                                index - currentIndex * 100
+                                index - currentIndex * 50
                             }%)`,
                         }}
                     >
@@ -43,6 +53,7 @@ const InnerConcertBanner = ({ data }) => {
 export default InnerConcertBanner;
 
 const Wrapper = styled.div`
+    width: 100vw;
     ${flexCenter};
     overflow: hidden;
 `;
@@ -53,9 +64,10 @@ const InnerBannerContainer = styled.div`
 `;
 
 const InnerBannerWrapper = styled.div`
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 350px;
     background-color: #c9c9c9;
+    margin: 0 4px;
 `;
 
 const OneBannerImgView = styled.div``;

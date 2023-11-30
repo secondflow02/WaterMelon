@@ -10,7 +10,7 @@ const SildeConcertBanner = () => {
     return (
         <>
             <ConcertSlideWrapper>
-                <InnerConcertBanner data={ticketData.ticketdata} />
+                <InnerConcertBanner data={ticketData} />
             </ConcertSlideWrapper>
         </>
     );
@@ -19,5 +19,4 @@ export default SildeConcertBanner;
 
 const ConcertSlideWrapper = styled.div`
     ${flexCenter};
-    position: relative;
 `;
