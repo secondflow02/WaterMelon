@@ -7,40 +7,61 @@ import SmallAlbum, { albumdata } from './SmallAlbum';
 
 // 1페어 이영록 장지영
 const LatestAlbum = () => {
-    const [slideAlbumListIndex, setSlideAlbumListtIndex] = useState(0);
+    const [slideAlbumListIndex, setSlideAlbumListIndex] = useState(0);
     const [albumCategory, setAlbumCategory] = useState(albumdata);
 
     const albumListData = albumdata.length;
 
+    // prev 버튼 클릭 이벤트
     const onClickPrevAlbum = () => {
-        setSlideAlbumListtIndex(prev =>
-            prev - 6 < 0 ? prev + albumListData - 6 : prev - 6,
-        );
-        const categoryIndex =
-            Math.floor((slideAlbumListIndex - 6) / 6) >= 0
-                ? Math.floor((slideAlbumListIndex - 6) / 6)
-                : Math.floor((albumListData - 6) / 6);
+        setSlideAlbumListIndex(prev => {
+            // prev - 6 < 0 ? prev + albumListData - 6 : prev - 6,
+            const newIndex = prev - 6 < 0 ? prev : prev - 6;
 
-        const category =
-            albumdata[categoryIndex]?.category ||
-            albumCategory[0]?.category ||
-            '전체';
-        onClickFilterCategory(category);
+            const categoryIndex = Math.floor((newIndex - 6) / 6);
+
+            const category =
+                albumdata[categoryIndex]?.category ||
+                albumCategory[0]?.category ||
+                '전체';
+            onClickFilterCategory(category, categoryIndex);
+            return newIndex;
+
+            /** Todos
+             * if.. 카테고리를 클릭한 후 prev 버튼을 클릭했을 때 더이상 해당 카테고리의 데이터가 없다면 이전 카테고리로 이동
+             * * 카테고리가 이동할 경우 focus 효과 그대로 적용되도록..
+             */
+        });
     };
+
+    // next 버튼 클릭 이벤트
     const onClickNextAlbum = () => {
-        setSlideAlbumListtIndex(prev =>
-            prev + 6 >= albumListData ? 0 : prev + 6,
-        );
-        const categoryIndex = Math.floor((slideAlbumListIndex + 6) / 6);
-        const nextCategoryIndex =
-            categoryIndex >= albumdata.length / 6 - 1 ? 0 : categoryIndex + 1;
-        const category =
-            albumdata[nextCategoryIndex]?.category ||
-            albumdata[0]?.category ||
-            '전체';
-        onClickFilterCategory(category);
+        setSlideAlbumListIndex(prev => {
+            const newIndex = prev + 6 >= albumListData ? prev : prev + 6;
+            const categoryIndex = Math.floor((newIndex + 6) / 6);
+            const nextCategoryIndex =
+                categoryIndex >= albumdata.length / 6 - 1
+                    ? 0
+                    : categoryIndex + 1;
+            const category =
+                albumdata[nextCategoryIndex]?.category ||
+                albumdata[0]?.category ||
+                '전체';
+            onClickFilterCategory(category, nextCategoryIndex);
+
+            return newIndex;
+
+            /** Todos
+             * if.. 카테고리를 클릭한 후 prev 버튼을 클릭했을 때 더이상 해당 카테고리의 데이터가 없다면 이후 카테고리로 이동
+             * 카테고리가 이동할 경우 focus 효과 그대로 적용되도록..
+             */
+        });
     };
 
+    // 각 카테고리 클릭 이벤트
+    /** Todos
+     * 카테고리 변경 시 categoryIndex 바꿔주기
+     */
     const onClickFilterCategory = category => {
         if (albumCategory[0]?.category === category) {
             return;
@@ -50,10 +71,18 @@ const LatestAlbum = () => {
         );
         setAlbumCategory(filterAlbumCategory);
 
-        setSlideAlbumListtIndex(0);
+        setSlideAlbumListIndex(0);
         console.log(filterAlbumCategory);
     };
 
+    /* useEffect(() => {
+        const categoryIndex = Math.floor((slideAlbumListIndex - 6) / 6);
+        const category =
+            albumdata[categoryIndex]?.category ||
+            albumCategory[0]?.category ||
+            '전체';
+        onClickFilterCategory(category, categoryIndex);
+    }, [slideAlbumListIndex]); */
     return (
         <Styled.Wrapper>
             <Styled.LatestTitle>
@@ -63,17 +92,29 @@ const LatestAlbum = () => {
                 <Styled.CategoryBox>
                     <Styled.Category>
                         <Styled.CategoryName>
-                            <a onClick={() => {}}>전체</a>
+                            <Styled.A href="#" onClick={() => {}}>
+                                전체
+                            </Styled.A>
                         </Styled.CategoryName>
                         <Styled.CategoryName>
-                            <a onClick={() => onClickFilterCategory('국내')}>
+
+                            <Styled.A
+                                href="#"
+                                onClick={() => onClickFilterCategory('국내')}
+                            >
+
                                 국내
-                            </a>
+                            </Styled.A>
                         </Styled.CategoryName>
                         <Styled.CategoryName>
-                            <a onClick={() => onClickFilterCategory('해외')}>
+                            <Styled.A
+                                href="#"
+                                onClick={() => onClickFilterCategory('해외')}
+                            >
                                 해외
-                            </a>
+
+                            </Styled.A>
+
                         </Styled.CategoryName>
                         <Styled.CategoryIndex>
                             <Styled.CategoryIndex>
@@ -128,8 +169,8 @@ const Category = styled.ul`
 `;
 const CategoryName = styled.li`
     font-size: 12px;
-    font-weight: 700;
-    color: #666;
+    font-weight: 900;
+    color: gray;
     padding: 0 4px;
     &:not(:last-of-type)::after {
         content: '|';
@@ -137,6 +178,14 @@ const CategoryName = styled.li`
     }
     a {
         cursor: pointer;
+    }
+`;
+const A = styled.a`
+    color: gray;
+    text-decoration: none;
+    &:focus {
+        color: black;
+        font-weight: 900;
     }
 `;
 const CategoryIndex = styled.p`
@@ -159,6 +208,7 @@ const Styled = {
     Category,
     CategoryBox,
     CategoryName,
+    A,
     CategoryIndex,
     SmallAlbumContainer,
 };
