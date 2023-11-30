@@ -6,20 +6,28 @@ const ConcertRanking = () => {
     return (
         <>
             <Styled.Wrapper>
-                <Styled.RankingBox>
+                <Styled.Container>
                     <Styled.H2>랭킹</Styled.H2>
                     <Styled.Ul>
                         <Styled.Li>
                             <Styled.A>더보기</Styled.A>
                         </Styled.Li>
                     </Styled.Ul>
-                </Styled.RankingBox>
+                </Styled.Container>
+                <Styled.RankingBox></Styled.RankingBox>
             </Styled.Wrapper>
         </>
     );
 };
 export default ConcertRanking;
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+    width: 310px;
+    margin: 0 10px;
+`;
+const Container = styled.div`
+    ${flexCenter}
+    justify-content: space-between;
+`;
 const RankingBox = styled.div`
     ${flexCenter}
 `;
@@ -33,6 +41,7 @@ const Li = styled.li`
 const A = styled.a``;
 const Styled = {
     Wrapper,
+    Container,
     RankingBox,
     H2,
     Ul,

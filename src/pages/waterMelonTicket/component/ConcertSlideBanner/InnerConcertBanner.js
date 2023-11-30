@@ -1,75 +1,61 @@
 import { useEffect, useState } from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
+import { flexCenter } from 'styles/common';
 
-const InnerConcertBanner = data => {
+const InnerConcertBanner = ({ data }) => {
+    const copyData = [...data, ...data];
+
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            handleNextSlide();
-        }, 4000);
+            setCurrentIndex(prev => (prev + 1) % data.length);
+        }, 1000);
         return () => clearInterval(interval);
-    }, [currentIndex]);
-
-    const handlePrevSlide = () => {
-        setCurrentIndex(
-            prev => (prev - 1 + data.data.length) % data.data.length,
-        );
-    };
-
-    const handleNextSlide = () => {
-        setCurrentIndex(prev => (prev + 1) % data.data.length);
-    };
-
-    let slideArr = [handlePrevSlide, ...data.data, handleNextSlide];
-
-    // console.log(data.data.length);
+    }, [currentIndex, data.length]);
 
     return (
         <>
-            {/* 두개를 연결하기 위해 두번 뿌려줌
-                더 좋은 방법이 있을듯 하다...
-            */}
-            {data.data.map((el, index) => (
-                <Styled.InnerBannerWrapper>
-                    <Styled.OneBannerImgView />
-                    <Styled.OneBannerContainer key={index}>
-                        <Styled.H3>{el.title}</Styled.H3>
-                        <Styled.P> {el.subTitle} </Styled.P>
-                    </Styled.OneBannerContainer>
-                </Styled.InnerBannerWrapper>
-            ))}
-            {data.data.map((el, index) => (
-                <Styled.InnerBannerWrapper>
-                    <Styled.OneBannerImgView />
-                    <Styled.OneBannerContainer key={index}>
-                        <H3>{el.title}</H3>
-                        <P> {el.subTitle} </P>
-                    </Styled.OneBannerContainer>
-                </Styled.InnerBannerWrapper>
-            ))}
+            <Styled.Wrapper>
+                {copyData.map((el, index) => (
+                    <Styled.InnerBannerContainer
+                        key={index}
+                        style={{
+                            transform: `translateX(${
+                                index - currentIndex * 100
+                            }%)`,
+                        }}
+                    >
+                        <Styled.InnerBannerWrapper>
+                            <Styled.OneBannerImgView />
+                            <Styled.OneBannerContainer>
+                                <Styled.H3>{el.title}</Styled.H3>
+                                <Styled.P>{el.subTitle}</Styled.P>
+                            </Styled.OneBannerContainer>
+                        </Styled.InnerBannerWrapper>
+                    </Styled.InnerBannerContainer>
+                ))}
+            </Styled.Wrapper>
         </>
     );
 };
 
 export default InnerConcertBanner;
 
-const animation = keyframes`
-    0% {
-        transform: translateX(480%);
-    }
-    100% {
-        transform: translateX(-720%);
-    }
+const Wrapper = styled.div`
+    ${flexCenter};
+    overflow: hidden;
+`;
+
+const InnerBannerContainer = styled.div`
+    display: flex;
+    transition: 0.5s ease;
 `;
 
 const InnerBannerWrapper = styled.div`
-    animation: ${animation} 20s linear infinite;
     width: 200px;
     height: 300px;
-    background-color: #893465;
-    margin: 0 20px;
-    /* position: absolute; */
+    background-color: #c9c9c9;
 `;
 
 const OneBannerImgView = styled.div``;
@@ -81,6 +67,8 @@ const H3 = styled.h3``;
 const P = styled.p``;
 
 const Styled = {
+    Wrapper,
+    InnerBannerContainer,
     InnerBannerWrapper,
     OneBannerImgView,
     OneBannerContainer,

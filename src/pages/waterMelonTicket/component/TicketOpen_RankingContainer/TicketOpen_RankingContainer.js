@@ -23,6 +23,7 @@ const TicketOpen_RankingContainer = () => {
 };
 export default TicketOpen_RankingContainer;
 const Wrapper = styled.div`
+    width: 1008px;
     ${flexCenter}
 `;
 const TicketOpenBox = styled.div``;

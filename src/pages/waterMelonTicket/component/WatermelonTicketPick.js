@@ -1,13 +1,38 @@
 import pickImage from 'mock/pickImage.json';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 //pick추천공연 포스터 1개
 const PickConcert = () => {
+    const [image, setImage] = useState(pickImage.pickdata);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch(
+                    '/WaterMelon/src/mock/pickImage.json',
+                );
+                const data = await response.pickdata.json();
+                setImage(data);
+            } catch (error) {
+                console.log('Error', error);
+            }
+        };
+        fetchData();
+    }, []);
+
+    console.log(image);
+
     return (
         <>
-            {pickImage.pickdata.map((el, index) => (
+            {console.log(image)}
+            {image.map((el, index) => (
                 <Wrapper>
-                    <Img src={pickImage.pickdata[index].url} />
+                    {console.log(pickImage.pickdata[index].url)}
+                    <Img
+                        src={`/WaterMelon/public/assets/images/${pickImage.pickdata[index].url}`}
+                    />
+                    {console.log(el[index])}
                     <P>{pickImage.pickdata[index].title}</P>
                     <P>{pickImage.pickdata[index].date}</P>
                     <P>{pickImage.pickdata[index].place}</P>
