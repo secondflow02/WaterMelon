@@ -6,18 +6,15 @@ import styled from 'styled-components';
 
 import { LargeData } from '../../../components/LargeAlbum';
 
-//image어떻게 찍히는 지 확인
-//import Image1 from '../../../components/LargeAlbum';
-// import img1 from 'https://cdnimg.melon.co.kr/svc/images/main/imgUrl20231114014430.jpg/melon/quality/80';
-
 const LargeAlbum = () => {
-    //const [state, setState] = useState(LargeData.LargeData);
     const [Data, setData] = useState(LargeData);
     const [startBtn, setStartBtn] = useState(false);
+    const [count, setCount] = useState([1, 2, 3, 4]); // 여기 의미가 맞게끔 변경
     let countRef = useRef(0); //timer :
     let album = [];
+    const [click, setClick] = useState(); // 여기 의미가 맞게끔 변경
     album.current = LargeData[countRef.current];
-    const [lend, setlend] = useState(false);
+    const [lend, setLend] = useState(false); // 여기 의미가 맞게끔 변경
     //const [curIdx, setCurIdx] = useState(0)
     // useEffect(()=>{
     //     // curIdx 가 변경되면 4초 뒤에 변경된다.
@@ -29,91 +26,49 @@ const LargeAlbum = () => {
     useEffect(() => {
         if (startBtn === false) {
             const interval = setInterval(() => {
-                console.log(countRef.current);
                 countRef.current++;
-                setlend(prev => !prev);
+                setLend(prev => !prev);
                 if (countRef.current > 3) {
                     countRef.current = 0;
                 }
             }, 4000);
             return () => clearInterval(interval);
         }
-        //const [curIdx, setCurIdx] = useState(0)
     }, [startBtn]);
-    // count 1마다 사진이 변경됨?
+    // count 1마다 사진이 변경됨
     useEffect(() => {
-        console.log(LargeData[0].Image);
-        console.log(album.current.Image);
         setData(Data => album.current);
-        //setState(state => albumRef.current);
     }, [album]);
 
     //로딩이되자마자 이벤트 실행( use effect)=>count 흐름
     // 버튼 클릭시 사진 변경(count마다 사진 변경그래야 movebtn 즉시 변화가능)
     // (new함수 생성=>currnt변수들 집어넣을 (사진들)
 
-    //state이용해서 해야되는데 생각만하고 못함 +정리
-    const index0Btn = () => {
-        countRef.current = 0;
-        console.log(countRef.current);
-        setlend(prev => !prev);
-    };
-    const index1Btn = () => {
-        countRef.current = 1;
-        console.log(countRef.current);
-        setlend(prev => !prev);
-    };
-    const index2Btn = () => {
-        countRef.current = 2;
-        console.log(countRef.current);
-        setlend(prev => !prev);
-    };
-    const index3Btn = () => {
-        countRef.current = 3;
-        console.log(countRef.current);
-        setlend(prev => !prev);
+    const onIndexBtn = e => {
+        const clickIndex = Array.from(
+            e.currentTarget.parentNode.children,
+        ).indexOf(e.currentTarget);
+        setClick(clickIndex);
+        countRef.current = clickIndex;
+        setLend(prev => !prev);
     };
     const onStartBtn = () => {
         setStartBtn(prev => !prev);
     };
-    //map 활용,뎁스 줄이기,
     return (
         <Styled.Wrapper>
             <Styled.EventList>
                 <Styled.PlayContain>
                     <Styled.MoveContain>
-                        <Styled.MoveBtn onClick={index0Btn}>
-                            {countRef.current === 0 ? (
-                                // eslint-disable-next-line react/jsx-pascal-case
-                                <Styled.isSelect>o</Styled.isSelect>
-                            ) : (
-                                'o'
-                            )}
-                        </Styled.MoveBtn>
-                        <Styled.MoveBtn onClick={index1Btn}>
-                            {countRef.current === 1 ? (
-                                // eslint-disable-next-line react/jsx-pascal-case
-                                <Styled.isSelect>o</Styled.isSelect>
-                            ) : (
-                                'o'
-                            )}
-                        </Styled.MoveBtn>
-                        <Styled.MoveBtn onClick={index2Btn}>
-                            {countRef.current === 2 ? (
-                                // eslint-disable-next-line react/jsx-pascal-case
-                                <Styled.isSelect>o</Styled.isSelect>
-                            ) : (
-                                'o'
-                            )}
-                        </Styled.MoveBtn>
-                        <Styled.MoveBtn onClick={index3Btn}>
-                            {countRef.current === 3 ? (
-                                // eslint-disable-next-line react/jsx-pascal-case
-                                <Styled.isSelect>o</Styled.isSelect>
-                            ) : (
-                                'o'
-                            )}
-                        </Styled.MoveBtn>
+                        {count.map((_, index) => (
+                            <Styled.MoveBtn onClick={onIndexBtn}>
+                                {countRef.current === index ? (
+                                    <Styled.isSelect>o</Styled.isSelect>
+                                ) : (
+                                    'o'
+                                )}
+                            </Styled.MoveBtn>
+                        ))}
                     </Styled.MoveContain>
                     <Styled.PlayBtn>
                         <div onClick={onStartBtn}>{startBtn ? '▷' : 'II'}</div>
@@ -194,6 +149,3 @@ const Styled = {
     MoveBtn,
     isSelect,
 };
-
-//사진 넘어가는 거 js 사진 연결되서 넘어가는 느낌
-//말
