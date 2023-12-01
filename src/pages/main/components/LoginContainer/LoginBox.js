@@ -29,7 +29,7 @@ const Wrapper = styled.div`
     margin-left: 8px;
     margin-top: 24px;
     width: 280px;
-    height: 316px;
+    height: 369px;
 `;
 //로그인 박스
 const LoginContainer = styled.div`
