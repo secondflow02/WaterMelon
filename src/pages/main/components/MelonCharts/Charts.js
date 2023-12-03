@@ -88,15 +88,15 @@ const Button = styled.div`
     padding: 5px 30px 5px 30px;
     position: relative;
     border: 1px solid;
-    bottom: 30px;
+    bottom: 31px;
 `;
-//1~10까지 각각 순위리스트
+//1~10까지 각각 순위리스트..
 const ChartListPart = styled.div`
     &:hover {
         cursor: pointer;
     }
 `;
-//1~10까지 순위리스트
+//1~10까지 순위리스트..
 const ChartList = styled.div`
     list-style-type: none;
     display: flex;
