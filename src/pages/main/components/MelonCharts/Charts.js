@@ -9,10 +9,13 @@ import chartData from '../../../../mock/chartData.json';
 
 const Charts = () => {
     const onMelonCartClickBtn = () => {};
+
     return (
         <div>
             <Styled.ChartTop>
-                <button onClick={onMelonCartClickBtn}>멜론차트</button>
+                <BtnChartTop onClick={onMelonCartClickBtn}>
+                    멜론차트
+                </BtnChartTop>
                 <p>2030.12.02 18:00 기준</p>
             </Styled.ChartTop>
             <Styled.ChartTopBtn>
@@ -21,25 +24,22 @@ const Charts = () => {
                 <Styled.Button>아티스트</Styled.Button>
             </Styled.ChartTopBtn>
             {chartData.chartdata.map((el, index) => (
-                <Styled.ChartList>
+                // el, index, el은 목데이터에 전체 엘리멘트를 가지고 옮,인덱스도 전체 인덱스를 가지고옮
+                <Styled.ChartList key={index} isEven={index % 2 == 1}>
+                    {/* isEven은 함수가 짝수인지홀수인지를 판별하고 반환해줌 */}
                     <Styled.ChartListPart>
                         {chartData.chartdata[index].ranking}
-                    </Styled.ChartListPart>
-                    <Styled.ChartListPart>
+
                         {chartData.chartdata[index].title}
-                    </Styled.ChartListPart>
-                    <Styled.ChartListPart>
+
                         {chartData.chartdata[index].singer}
+
+                        {chartData.chartdata[index].rankingChange}
+
+                        {chartData.chartdata[index].image}
                     </Styled.ChartListPart>
-                    <Styled.ChartListPart></Styled.ChartListPart>
-                    <Styled.ChartListPart></Styled.ChartListPart>
-                    <Styled.ChartListPart></Styled.ChartListPart>
-                    <Styled.ChartListPart></Styled.ChartListPart>
-                    <Styled.ChartListPart></Styled.ChartListPart>
-                    <Styled.ChartListPart></Styled.ChartListPart>
-                    <Styled.ChartListPart></Styled.ChartListPart>
-                    <Styled.ChartListPart></Styled.ChartListPart>
                 </Styled.ChartList>
+                // 호버로 맵을 돌림->이거를 하나로 만듦
             ))}
             <Styled.ChartLowBtn>
                 <button>셔플듣기</button>
@@ -71,12 +71,11 @@ const ChartTop = styled.div`
     position: relative;
     bottom: 20px;
 `;
-//제일 상단 멜론차트버튼
-const MelonCartBtn = styled.button`
-    border: none;
+const BtnChartTop = styled.button`
     background-color: white;
-    font-weight: 700;
-    font-size: 16px;
+
+    font-size: large;
+    font-weight: 900;
 `;
 
 //TOP100,POP,아티스트 3개 버튼
@@ -84,27 +83,45 @@ const ChartTopBtn = styled.div`
     display: flex;
 `;
 //상단 3개에 버튼
-const Button = styled.div`
-    padding: 5px 30px 5px 30px;
+const Button = styled.button`
     position: relative;
-    border: 1px solid;
+    padding: 5px 30px 5px 30px;
+
     bottom: 31px;
+    background-color: white;
 `;
 //1~10까지 각각 순위리스트..
 const ChartListPart = styled.div`
+    /* padding: 3px;
+    font-size: 14px;
     &:hover {
-        cursor: pointer;
-    }
+        padding: 10px;
+        margin: 10px;
+        font-size: medium;
+        cursor: pointer; */
+    /* } */
 `;
 //1~10까지 순위리스트..
 const ChartList = styled.div`
+    background-color: ${({ isEven }) => (isEven ? '#e9ecef' : 'white')};
+    /* $위에서 isEven을 가지고 온다,$템플릿리터럴을 뜻하며 변수 나 표현식을 문자열에 삽입할떄 사용한다 */
     list-style-type: none;
     display: flex;
     border: 1px solid;
     height: 30px;
     position: relative;
     bottom: 30px;
-    padding: 3px 3px 3px 3px;
+    padding: 3px;
+    font-size: small;
+    /*ChartListPart에 hover을 주지않고 부모에 hover을줌 */
+    &:hover {
+        /* &특수한 선택자를 나타내며 주로 중첩된 선택자에서 부모선택자를 나타낼떄 사용된다
+        일반적으로 상위선택자(부모)를 참조하여 중첩된 규칙을 생성할떄 사용된다*/
+        height: 50px;
+        padding: 1px;
+        font-size: medium;
+        cursor: pointer;
+    }
 `;
 //하단 셔플 과 더보기 버튼
 const ChartLowBtn = styled.div`
@@ -119,8 +136,8 @@ const Styled = {
     ChartTop,
     ChartTopBtn,
     ChartList,
-    MelonCartBtn,
     ChartLowBtn,
     Button,
     ChartListPart,
+    BtnChartTop,
 };
